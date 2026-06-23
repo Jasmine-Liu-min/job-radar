@@ -1,0 +1,56 @@
+# 轻量部署信息台：代码/样式/README 更新时只刷新 GitHub Pages，不跑完整抓取、不发推送。
+name: job-radar-pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/jobs.html"
+      - "data/notify_preview.md"
+      - "scripts/export_html.py"
+      - "job_radar/**"
+      - ".github/workflows/pages.yml"
+      - "README.md"
+  workflow_run:
+    workflows: ["job-radar-sync"]
+    types: [completed]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Export HTML
+        run: python3 scripts/export_html.py
+
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p public
+          cp data/jobs.html public/index.html
+          cp data/jobs.html public/jobs.html
+          if [ -f data/notify_preview.md ]; then
+            cp data/notify_preview.md public/notify_preview.md
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - uses: actions/deploy-pages@v4

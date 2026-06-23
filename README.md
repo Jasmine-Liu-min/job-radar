@@ -257,7 +257,14 @@ python3 scripts/notify_preview.py --include-existing-due
 
 ### GitHub Actions（推荐，无需开机）
 
-托管到 GitHub 后，`.github/workflows/sync.yml` 会每天自动同步，也支持在 Actions 页面手动运行。
+托管到 GitHub 后，有两条 workflow：
+
+| Workflow | 触发方式 | 做什么 | 大概耗时 |
+|---|---|---|---|
+| `job-radar-sync` | 每天定时 / 手动 Run workflow | 抓取信源、增量合并、生成预览、发送新增推送、提交 `data/` | 几分钟 |
+| `job-radar-pages` | `job-radar-sync` 成功后自动触发；push 页面/README/展示逻辑后也会触发；也可手动 | 只部署 GitHub Pages，不抓取、不推送 | 通常几十秒 |
+
+所以平时改样式、README、信息台展示，不会再跑完整抓取；真正的招聘同步只在定时或你手动点 `job-radar-sync` 时运行。
 
 配置网页托管：
 
@@ -281,19 +288,27 @@ https://jasmine-liu-min.github.io/job-radar/
 | `WECHAT_WEBHOOK_URL` | 企业微信机器人 webhook |
 | `WECOM_WEBHOOK_URL` | 企业微信机器人 webhook，备用别名 |
 
-4. 去 `Actions -> job-radar-sync -> Run workflow` 手动触发一次测试。
+4. 去 `Actions -> job-radar-sync -> Run workflow` 手动触发一次完整同步测试。
 
 成功后每天北京时间 **09:17** 左右自动运行。GitHub Actions 的定时触发可能有几分钟延迟，这是正常现象；手动触发是即时的。
 
-workflow 会执行：
+完整同步 workflow 会执行：
 
 ```text
 sync -> export_html -> notify_preview -> send_notify -> commit data/
 ```
 
+完整同步成功后会自动触发 `job-radar-pages`，把最新 `data/jobs.html` 发布到 GitHub Pages。
+
 有 webhook secret 时会推送“未推过的新增”；没有 secret 时只生成 `data/notify_preview.md`，不会报错。发送成功后会更新 `data/notify_state.json`，下一次自动过滤已推岗位。飞书/企微推送里会附带在线信息台链接，不需要本地打开 `data/jobs.html`。
 
 修改推送时间：编辑 `.github/workflows/sync.yml` 里的 `cron` 和 `timezone`。
+
+### 历史数据说明
+
+`data/jobs.json` 是当前岗位库：同步时会增量合并新岗位、刷新已有岗位、处理下线岗位，并保留 `first_seen` 等时间字段。`data/notify_state.json` 记录已经推送过的岗位，保证飞书/企微只推新增。
+
+如果要做“长期历史快照”，下一步可以加 `data/archive/YYYY-MM-DD.json` 或每周汇总表；当前 1.0 先保证信息台在架数据和新增推送稳定。
 
 ## 信源现状
 
@@ -364,9 +379,12 @@ python3 scripts/smoke_test.py
 
 ## 自动化部署
 
-GitHub Actions：`.github/workflows/sync.yml`
+GitHub Actions：
 
-当前流程：
+- `.github/workflows/sync.yml`：完整同步，定时或手动触发。
+- `.github/workflows/pages.yml`：轻量 Pages 部署，完整同步成功后或 push 展示层变更时触发。
+
+完整同步流程：
 
 1. 定时或手动触发。
 2. 安装 Python 和 Playwright。
@@ -375,6 +393,7 @@ GitHub Actions：`.github/workflows/sync.yml`
 5. 生成 `data/notify_preview.md`。
 6. 运行 `scripts/send_notify.py`，有 webhook secret 时发送新增摘要。
 7. commit `data/`，包括岗位库、工作台、健康报告、推送预览、已推送状态。
+8. 完整同步成功后触发 `job-radar-pages`，部署在线信息台。
 
 没有 webhook secret 时，发送步骤会安全跳过，不影响同步。
 

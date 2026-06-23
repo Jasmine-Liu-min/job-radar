@@ -12,8 +12,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   sync:
@@ -61,16 +59,3 @@ jobs:
             git commit -m "chore(data): sync jobs $(date -u +%F)"
             git push
           fi
-
-      - name: Prepare Pages artifact
-        run: |
-          mkdir -p public
-          cp data/jobs.html public/index.html
-          cp data/jobs.html public/jobs.html
-          cp data/notify_preview.md public/notify_preview.md
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: public
-
-      - uses: actions/deploy-pages@v4
