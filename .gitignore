@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local review exports from browser/downloads. Import reviewed files explicitly when needed.
+job_import_review*.json
+*_import_review.json
+
+# Local scratch outputs. Keep durable project data under data/ or docs/.
+tmp/
+scratch/
+*.tmp
+*.bak
+*~
+
+# data/ 由 GitHub Actions 生成并 commit；source_state/notify_state 属于运行状态，可保留。
+
+.ssh/

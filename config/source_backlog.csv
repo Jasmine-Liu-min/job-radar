@@ -1,0 +1,34 @@
+priority,source_id,name,type,url,status,next_action,notes
+1,feed-nowcoder,牛客内推/校招讨论帖,community,https://www.nowcoder.com/discuss,discover_review,nowcoder_discover.py then import_feed --preset nowcoder --url-file,27届提前批/秋招信息密度高，先发现讨论帖链接，再进审核台
+1,feed-wechat,招聘公众号/企业公众号,community,https://mp.weixin.qq.com/,manual_import,import_feed --source-id feed-wechat --source-name 公众号招聘 --url,企业公众号常首发提前批/秋招/春招，先人工喂链接
+1,feed-school-group,学校就业群/腾讯文档汇总,community,,manual_import,import_feed --source-id feed-school-group --source-name 学校群汇总,闭群信息无法自动抓，表格/文本导入最稳
+1,cn-huawei-campus,华为校园招聘,official,https://career.huawei.com/reccampportal/portal5/index.html,blocked,write dedicated adapter,27届主战场，常需动态接口/地区参数
+1,cn-alibaba-campus,阿里巴巴校园招聘,official,https://talent.alibaba.com/campus,blocked,write dedicated adapter,登录/WAF 风险，优先抓公开职位接口
+1,cn-meituan-campus,美团校园招聘,official,https://zhaopin.meituan.com/,blocked,write dedicated adapter,接口需登录或签名
+1,cn-baidu-campus,百度校园招聘,official,https://talent.baidu.com/,blocked,write dedicated adapter,校招专题重要，需抓包
+1,cn-xiaomi-campus,小米校园招聘,official,https://hr.xiaomi.com/campus,blocked,write dedicated adapter,硬科技/互联网机会
+1,cn-bilibili-campus,B站校园招聘,official,https://jobs.bilibili.com/,blocked,write dedicated adapter,产品/数据/算法方向
+1,cn-kuaishou-campus,快手校园招聘,official,https://zhaopin.kuaishou.cn/,blocked,write dedicated adapter,算法/数据方向
+2,job-yingjiesheng,应届生求职网,aggregator,https://www.yingjiesheng.com/,blocked,investigate anti-bot rendering,27届校招覆盖广，页面含反爬 renderData
+2,job-haitou,海投网,aggregator,https://www.haitou.cc/,blocked,investigate public pages/API,宣讲会/校招日历类信息源
+2,job-jobsdig,校招日历/求职日历,aggregator,,research,find stable source,用于补秋招/春招节点
+1,cn-iguopin,国聘,aggregator,https://www.iguopin.com/,active,iguopin adapter,央国企/国企校招重要，已接公开职位 API
+2,cn-icbc-campus,工商银行校园招聘,official,https://job.icbc.com.cn/,blocked,per-site adapter,金融科技/国企方向
+2,cn-sgcc-campus,国家电网校园招聘,official,https://zhaopin.sgcc.com.cn/,blocked,Playwright adapter,WAF 412，央国企核心
+1,cn-cmb-campus,招商银行校园招聘,official,https://career.cmbchina.com/,research,investigate public API,金融科技/数据/产品/管培，非互联网主线
+1,cn-pingan-campus,中国平安校园招聘,official,https://campus.pingan.com/,research,investigate public API,金融/保险科技/数据分析/产品
+1,cn-cicc-campus,中金公司校园招聘,official,https://career.cicc.com/,research,investigate public API,投研/战略/数据/管培
+1,cn-byd-campus,比亚迪校园招聘,official,https://job.byd.com/,research,investigate public API,汽车新能源/智能制造/数据/产品
+1,cn-catl-campus,宁德时代校园招聘,official,https://talent.catl.com/,research,investigate public API,新能源/制造/数据/数字化
+1,cn-midea-campus,美的校园招聘,official,https://careers.midea.com/,research,investigate public API,制造业产品/数字化/供应链/数据
+1,cn-haier-campus,海尔校园招聘,official,https://maker.haier.net/,research,investigate public API,制造/物联网/数字化/产品
+1,cn-siemens-campus,西门子中国校园招聘,official,https://jobs.siemens.com/careers,active_candidate,workday/ats candidate,工业自动化/数字化/数据
+1,cn-schneider-campus,施耐德电气校园招聘,official,https://www.se.com/cn/zh/about-us/careers/,research,investigate ATS,能源管理/工业数字化/产品
+1,cn-honeywell-campus,霍尼韦尔中国校园招聘,official,https://careers.honeywell.com/,research,investigate ATS,工业/航空/自动化/数字化
+1,cn-pg-campus,宝洁校园招聘,official,https://www.pgcareers.com.cn/,research,investigate public pages,快消/品牌/商业分析/产品运营
+1,cn-loreal-campus,欧莱雅校园招聘,official,https://careers.loreal.com/,research,investigate ATS,消费/市场/数据/管理培训生
+1,cn-unilever-campus,联合利华校园招聘,official,https://careers.unilever.com/,research,investigate ATS,快消/供应链/商业分析/管培
+1,cn-mckinsey-campus,麦肯锡校园招聘,official,https://www.mckinsey.com/careers,manual_import,import_feed --source-id cn-mckinsey-campus,咨询/战略/商业分析，官网多地区需人工核验
+1,cn-bcg-campus,BCG校园招聘,official,https://careers.bcg.com/,manual_import,import_feed --source-id cn-bcg-campus,咨询/战略/数字化，官网与公众号并行
+1,cn-deloitte-campus,德勤校园招聘,official,https://www2.deloitte.com/cn/zh/careers/students.html,manual_import,import_feed --source-id cn-deloitte-campus,咨询/审计/数字化/风险咨询
+1,cn-pwc-campus,普华永道校园招聘,official,https://www.pwccn.com/zh/careers/students.html,manual_import,import_feed --source-id cn-pwc-campus,咨询/审计/管理咨询/数据

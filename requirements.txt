@@ -1,0 +1,2 @@
+# Optional browser automation for 牛客/实习僧/部分高校 SPA.
+playwright>=1.45,<2

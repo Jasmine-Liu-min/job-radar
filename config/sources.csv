@@ -1,0 +1,73 @@
+source_id,company_name,org_type,source_type,adapter,endpoint,priority,fetch_method,requires_login,city_scope,poll_interval_minutes,status,notes
+# ============================================================================
+# 信源库（Phase 0 产出）。status 含义：
+#   active     正常抓取
+#   unstable   近期有失败，仍尝试（健康度闭环自动标记）
+#   blocked    已知反爬/登录墙/SPA，需 Playwright 或 AI 抽取，sync 暂跳过（backlog）
+#   deprecated 已弃用，永久跳过
+# 抓取数量为 2026-06 实测，仅供参考。
+# ============================================================================
+#
+# ===== 海外远程参考（精简：仅保留"全球远程招聘"的，作为 remote 机会参考，国内可投）=====
+ashby-posthog,PostHog,tech,ats,ashby,posthog,3,api,no,remote,1440,active,全球远程·数据分析(国内可投)
+gh-gitlab,GitLab,tech,ats,greenhouse,gitlab,3,api,no,remote,1440,active,全球远程·全员远程公司(国内可投)
+# ===== 在华外企（Workday，自动只取中国岗位，国内可投，多为大厂之外的多元雇主）=====
+wd-nvidia,英伟达,tech,ats,workday,nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite,1,api,no,上海·北京·深圳,720,active,半导体/AI 外企在华
+wd-amat,应用材料,tech,ats,workday,amat.wd1.myworkdayjobs.com|amat|External,2,api,no,上海·西安,720,active,半导体设备外企在华
+wd-3m,3M,tech,ats,workday,3m.wd1.myworkdayjobs.com|3m|Search,2,api,no,上海,720,active,工业/材料外企在华(非大厂·可投)
+wd-pfizer,辉瑞,tech,ats,workday,pfizer.wd1.myworkdayjobs.com|pfizer|PfizerCareers,2,api,no,上海·北京,720,active,医药外企在华(含管培生)
+wd-astrazeneca,阿斯利康,tech,ats,workday,astrazeneca.wd3.myworkdayjobs.com|astrazeneca|Careers,2,api,no,上海·北京,720,active,医药外企在华
+wd-intel,英特尔,tech,ats,workday,intel.wd1.myworkdayjobs.com|intel|External,2,api,no,上海·成都·大连,720,active,半导体外企在华(CPU/晶圆)·实测可抓
+wd-kla,科磊KLA,tech,ats,workday,kla.wd1.myworkdayjobs.com|kla|Search,2,api,no,上海·北京,720,active,半导体量测设备外企在华·实测~40
+wd-nxp,恩智浦NXP,tech,ats,workday,nxp.wd3.myworkdayjobs.com|nxp|careers,2,api,no,上海·北京·天津,720,active,半导体外企在华(汽车芯片/MCU)·实测~40
+wd-abbott,雅培,tech,ats,workday,abbott.wd5.myworkdayjobs.com|abbott|abbottcareers,2,api,no,上海·北京,720,active,医疗器械/诊断外企在华·实测~40
+# 说明：原先为"验证/行业覆盖"加过大量海外 ATS(databricks/stripe/openai/brex/lucid 等)，
+# 但它们多为美国本土招聘、国内不可投，撑大了库且信噪比低，现已移除（国内为主）。
+# 如需临时参考某家，按 adapter=greenhouse|lever|ashby + token 加一行即可。
+#
+# ===== P0 国内互联网/科技公司官网（JSON 接口，差异化重点，实测可抓）=====
+cn-bytedance,字节跳动,internet,official,bytedance,https://jobs.bytedance.com/,1,api,no,北京·深圳·上海,360,active,官网接口 ~20/页 含豆包/火山方舟 AI 岗
+cn-tencent,腾讯,internet,official,tencent,https://careers.tencent.com/,1,api,no,深圳·北京·上海,360,active,官网社招接口·深翻页
+cn-tencent-campus,腾讯(校招),internet,official,tencent_campus,https://join.qq.com/,1,api,no,深圳·北京·上海·广州·成都,360,active,腾讯校园招聘门户 join.qq.com·校招/实习~528
+cn-jd,京东,internet,official,jd,https://zhaopin.jd.com/,1,api,no,北京·上海·成都,360,active,官网接口 ~30/页
+cn-netease,网易,internet,official,netease,https://hr.163.com/,1,api,no,杭州·北京·广州,360,active,官网接口(游戏/数据/算法/后端)·抓包发现
+cn-nio,蔚来,tech,official,feishu,https://nio.jobs.feishu.cn/,1,playwright,no,上海·合肥,360,active,新能源车·飞书招聘(Playwright捕获)~10/页
+cn-sensetime,商汤科技,tech,official,beisen,hr.sensetime.com|SU60fa3bdabef57c1023fc1cbc,1,api,no,北京·上海·深圳,360,active,AI·北森ATS(直连)~114
+cn-horizon,地平线,tech,official,beisen,wecruit.hotjob.cn|SU6409ef49bef57c635fd390a6,1,api,no,北京·上海,360,active,AI芯片/自动驾驶·北森ATS(直连)~132
+#
+# ===== P0 国内官网（已知反爬/登录墙，待 Phase 2 上 Playwright）=====
+cn-alibaba,阿里巴巴,internet,official,public_notice,https://talent.alibaba.com/,1,api,yes,杭州·北京,360,blocked,WAF 403，需登录态/Playwright，待写专属 adapter
+cn-meituan,美团,internet,official,public_notice,https://zhaopin.meituan.com/,2,api,yes,北京·上海,360,blocked,接口需登录(401)，待写专属 adapter
+cn-sgcc,国家电网,soe,official,public_notice,https://zhaopin.sgcc.com.cn/,1,html,no,全国,1440,blocked,WAF 412 JS 挑战，需 Playwright
+#
+# ===== P3 高校就业网（服务端渲染 HTML，实测可抓；重点：华南 + 长沙）=====
+# 新锦成系平台（/campus/view /teachin/view），adapter=uni_career，进详情页补全公司全名+日期+校区
+edu-sysu,中山大学就业信息网,research,public_notice,uni_career,https://career.sysu.edu.cn/,1,html,no,广州·深圳·珠海,720,active,华南·校招公告+宣讲会，详情补全工商全名
+edu-csu,中南大学就业信息网,research,public_notice,uni_career,https://career.csu.edu.cn/,1,html,no,长沙,720,active,长沙·985·同平台 ~98 条
+# bysjy 系平台（/detail/career /detail/news），adapter=uni_bysjy，列表即含标题+日期，不进详情页
+edu-hnu,湖南大学就业信息网,research,public_notice,uni_bysjy,https://scc.hnu.edu.cn/,1,html,no,长沙,720,active,长沙·985·宣讲会+公告+选调
+edu-scnu,华南师范大学就业网,research,public_notice,uni_bysjy,https://career.scnu.edu.cn/,2,html,no,广州,720,active,华南·招聘公告（已过滤行政通知）
+edu-xidian,西安电子科技大学就业网,research,public_notice,uni_career,https://job.xidian.edu.cn/,1,html,no,西安,720,active,电子/通信/半导体强校·宣讲会聚合硬科技公司 ~33
+# 暨南大学(career.jnu.edu.cn) 同 bysjy 平台但首页有效条目过少
+edu-jnu,暨南大学就业信息网,research,public_notice,uni_bysjy,https://career.jnu.edu.cn/,3,html,no,广州·深圳,720,deprecated,bysjy 平台但首页有效条目过少，待换列表页 endpoint
+# 江浙沪 SPA 高校（adapter=uni_spa，需 Playwright 渲染；可选依赖，未装则该源优雅失败）
+edu-fudan,复旦大学就业网,research,public_notice,uni_spa,https://career.fudan.edu.cn/,1,playwright,no,上海,720,active,沪·985·首页渲染真实岗位(职位+公司+日期) ~32 条
+edu-nju,南京大学就业网,research,public_notice,uni_spa,https://job.nju.edu.cn/,1,playwright,no,南京,720,active,苏·985·宣讲会+专场招聘 ~8 条
+edu-sjtu,上海交大就业网,research,public_notice,sjtu,https://www.job.sjtu.edu.cn/,1,playwright,no,上海,720,active,沪·985·反爬+JSON接口，Playwright捕获就业日历 ~9 条
+edu-zju,浙江大学就业网,research,public_notice,zju,https://www.career.zju.edu.cn/,1,api,no,杭州,720,active,浙·985·开放 JSON 接口(无反爬)，宣讲会+招聘会 ~30 条
+#
+# ===== P3 国家级官方聚合平台（应届生校招）=====
+gov-ncss,国家大学生就业服务平台(24365),public_institution,public_notice,ncss,https://www.ncss.cn/,1,api,no,全国,360,active,教育部官方·全国应届生校招·公开JSON接口(无反爬)·含国企/事业单位/重点领域
+gov-mohrss,中国公共招聘网(人社部),public_institution,public_notice,mohrss,http://job.mohrss.gov.cn/,2,html,no,广东·湖南·浙江·江苏·上海,720,active,人社部官方·按省筛(粤湘浙苏沪)·含薪资/经验/截止/详情外链
+gov-sasac,国资委·人事招聘,soe,public_notice,gov_notice,http://www.sasac.gov.cn/n2588035/n2588325/n2588350/index.html,1,html,no,全国,720,active,央企公告最权威源(航发/东航/航空工业等直发)
+gov-qyzp,中央企业招聘应届高校毕业生信息公开,soe,public_notice,gov_notice,http://www.job.mohrss.gov.cn/qyzp/index.jhtml,1,html,no,全国,720,active,人社部·央企应届校招专栏
+#
+# ===== P3 央国企/公共招聘平台（差异化核心，多为 SPA/公告，需 AI 抽取）=====
+cn-iguopin,国聘,aggregator,aggregator,iguopin,https://www.iguopin.com/,1,api,no,全国,720,active,国聘公开职位 API·央国企/国企校招/实习/提前批
+#
+# ===== 学生向聚合平台（Playwright 渲染，绕反爬/字体加密）=====
+nk-intern,牛客网·实习,aggregator,community,nowcoder,https://www.nowcoder.com/jobs/intern/center,2,playwright,no,全国,720,active,牛客实习·浏览器渲染(含薪资/届别)
+nk-campus,牛客网·校招,aggregator,community,nowcoder,https://www.nowcoder.com/jobs/fulltime/center,2,playwright,no,全国,720,active,牛客校招/全职·浏览器渲染
+sxs-intern,实习僧,aggregator,community,shixiseng,https://www.shixiseng.com/interns,2,playwright,no,全国,720,active,实习僧·浏览器渲染(薪资字体加密略)
+cn-icbc,工商银行,finance,official,public_notice,https://job.icbc.com.cn/,2,html,no,全国,1440,blocked,公告/SPA，需 per-site 适配
+cn-sinopec,中国石化,soe,official,public_notice,https://job.sinopec.com/,3,html,no,全国,1440,blocked,公告类，需 AI 抽取

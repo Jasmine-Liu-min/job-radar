@@ -1,0 +1,76 @@
+# 定时同步招聘信息（规划 8.1：GitHub Actions + 静态数据，零服务器零运维）。
+# 每次跑 sync 做【增量累积】（新增追加、消失标 gone、保留用户状态），
+# 再导出 jobs.html，把 data/ commit 回仓库；前端/浏览纯静态读取。
+name: job-radar-sync
+
+on:
+  schedule:
+    # 每天北京时间 09:17 自动同步；非整点可减少 GitHub Actions 排队。
+    - cron: "17 9 * * *"
+      timezone: "Asia/Shanghai"
+  workflow_dispatch: {}   # 支持手动触发
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --quiet -r requirements.txt
+          python3 -m playwright install --with-deps chromium
+
+      - name: Run sync (incremental)
+        run: python3 -m job_radar.sync
+
+      - name: Export HTML
+        run: python3 scripts/export_html.py
+
+      - name: Build notify preview
+        env:
+          WORKBENCH_URL: https://jasmine-liu-min.github.io/job-radar/
+        run: python3 scripts/notify_preview.py
+
+      - name: Send new-only notify
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          WECHAT_WEBHOOK_URL: ${{ secrets.WECHAT_WEBHOOK_URL }}
+          WECOM_WEBHOOK_URL: ${{ secrets.WECOM_WEBHOOK_URL }}
+          WORKBENCH_URL: https://jasmine-liu-min.github.io/job-radar/
+        run: python3 scripts/send_notify.py
+
+      - name: Commit data
+        run: |
+          git config user.name  "job-radar-bot"
+          git config user.email "job-radar-bot@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "无新增/变更岗位，跳过 commit"
+          else
+            git commit -m "chore(data): sync jobs $(date -u +%F)"
+            git push
+          fi
+
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p public
+          cp data/jobs.html public/index.html
+          cp data/jobs.html public/jobs.html
+          cp data/notify_preview.md public/notify_preview.md
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - uses: actions/deploy-pages@v4
