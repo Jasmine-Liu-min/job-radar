@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>招聘雷达工作台</title>
 <style>
 /* 莫兰迪 / 小红书 ins 风：冷调留白 · 低饱和鼠尾草绿点缀 */
@@ -9,7 +9,7 @@
   --dove:#c4c9d0;--bd:#eceef1;--bd2:#e2e5ea;--clay:#6f9384;--clay-dk:#4f6f60;
   --peach:#e8efe9;--sage:#e9ecf4;--green:#5f8a6d;--red:#b06b74;
   --shadow:0 1px 2px rgba(40,45,55,.04),0 8px 24px -12px rgba(40,45,55,.12);
-  --radius-card:18px;--radius-in:13px;
+  --radius-card:18px;--radius-in:13px;--safe-top:env(safe-area-inset-top,0px);
 }
 *{box-sizing:border-box}
 body{margin:0;color:var(--ink);
@@ -18,7 +18,7 @@ body{margin:0;color:var(--ink);
   font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,"PingFang SC","Microsoft YaHei",sans-serif;
   letter-spacing:-.14px}
 header{position:sticky;top:0;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--bd);padding:16px 22px;z-index:10}
+  border-bottom:1px solid var(--bd);padding:calc(16px + var(--safe-top)) 22px 16px;z-index:10}
 h1{margin:0 0 4px;font-weight:600;font-size:24px;letter-spacing:-.5px;color:var(--ink)}
 .stat{color:var(--graphite);font-size:12.5px}
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;align-items:center}
@@ -33,7 +33,7 @@ input:focus,select:focus{border-color:var(--ink)}
 .chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
 .range{display:flex;align-items:center;gap:6px;color:var(--graphite);font-size:12px}
 main{max-width:1280px;margin:0 auto;padding:20px 22px;display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px}
+  grid-template-columns:repeat(auto-fill,minmax(min(360px,100%),1fr));gap:16px}
 .card{background:var(--canvas);border-radius:var(--radius-card);padding:16px 18px;
   display:flex;flex-direction:column;gap:7px;box-shadow:var(--shadow);transition:.18s}
 .card:hover{transform:translateY(-1px);box-shadow:0 0 0 1px rgba(4,23,43,.07),0 16px 30px -10px rgba(20,20,30,.16)}
@@ -141,6 +141,24 @@ main.station{display:block;max-width:1240px}
 .alertline:last-child{border-bottom:0}.alertline b{color:var(--ink);font-weight:600}
 .mutedline{color:var(--graphite);font-size:12px}
 @media(max-width:900px){.dashgrid,.dashrow{grid-template-columns:1fr}}
+@media(max-width:720px){
+  body{background-attachment:scroll;font-size:13px}
+  header{position:static;padding:12px 12px 10px}
+  h1{font-size:20px}
+  .filters,.tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none;margin-left:-2px;margin-right:-2px;padding:0 2px 2px}
+  .filters::-webkit-scrollbar,.tabs::-webkit-scrollbar{display:none}
+  #q{flex:0 0 260px;min-width:260px}
+  select{flex:0 0 auto}
+  .chip,.tab{flex:none}
+  .range{flex:0 0 auto}
+  main{padding:12px;grid-template-columns:1fr;gap:12px}
+  .card,.panel{border-radius:14px;padding:13px}
+  .dash{gap:12px}.dashgrid,.dashrow{gap:12px}
+  main.board{padding-left:12px;padding-right:12px}
+  .bcol{width:82vw;min-width:82vw}
+  .htable{display:block;overflow-x:auto;white-space:nowrap}
+}
 </style></head><body>
 <header>
   <h1>招聘雷达工作台 <span class="stat" id="gen"></span></h1>
