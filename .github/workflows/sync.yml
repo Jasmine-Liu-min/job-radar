@@ -5,10 +5,25 @@ name: job-radar-sync
 
 on:
   schedule:
-    # 每天北京时间 09:17 自动同步；非整点可减少 GitHub Actions 排队。
-    - cron: "17 9 * * *"
+    # 周一到周六北京时间 09:17 快扫，不跑浏览器慢源。
+    - cron: "17 9 * * 1-6"
       timezone: "Asia/Shanghai"
-  workflow_dispatch: {}   # 支持手动触发
+    # 周日北京时间 09:47 深扫，补牛客/实习僧/SPA 高校等慢源。
+    - cron: "47 9 * * 0"
+      timezone: "Asia/Shanghai"
+  workflow_dispatch:
+    inputs:
+      plan:
+        description: "同步计划：fast=快扫；slow=慢源；full=全量；rescore=只重算展示；smart=本地策略入口"
+        required: false
+        default: "fast"
+        type: choice
+        options:
+          - smart
+          - fast
+          - slow
+          - full
+          - rescore
 
 permissions:
   contents: write
@@ -24,16 +39,18 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        run: |
-          python3 -m pip install --quiet -r requirements.txt
-          python3 -m playwright install --with-deps chromium
+      - name: Install Python dependencies
+        if: github.event.schedule == '47 9 * * 0' || (github.event_name == 'workflow_dispatch' && (inputs.plan == 'slow' || inputs.plan == 'full'))
+        run: python3 -m pip install --quiet -r requirements.txt
 
-      - name: Run sync (incremental)
-        run: python3 -m job_radar.sync
+      - name: Install browser dependencies
+        if: github.event.schedule == '47 9 * * 0' || (github.event_name == 'workflow_dispatch' && (inputs.plan == 'slow' || inputs.plan == 'full'))
+        run: python3 -m playwright install --with-deps chromium
 
-      - name: Export HTML
-        run: python3 scripts/export_html.py
+      - name: Run sync plan
+        env:
+          PLAN: ${{ inputs.plan || (github.event.schedule == '47 9 * * 0' && 'full' || 'fast') }}
+        run: python3 scripts/sync_plan.py "$PLAN"
 
       - name: Build notify preview
         env:

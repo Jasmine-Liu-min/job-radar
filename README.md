@@ -46,6 +46,7 @@ python3 scripts/send_notify.py --dry-run
 |---|---|---|
 | `data/jobs.html` | 招聘信息台页面 | 最终查看入口，数据内嵌，双击可用 |
 | `data/jobs.json` | 当前岗位库 | 自动生成，尽量不要手改 |
+| `data/jobs_archive.json` | 下线/消失岗位轻量归档 | 自动生成，用于复盘，不进入信息台展示 |
 | `data/notify_preview.md` | 新增推送预览 | 每次同步后看这里 |
 | `data/notify_state.json` | 已推送记录 | 发送成功后自动写入，用于去重 |
 | `data/inbox/` | 牛客/公众号/就业群线索池 | 半自动导入前的暂存区 |
@@ -261,10 +262,16 @@ python3 scripts/notify_preview.py --include-existing-due
 
 | Workflow | 触发方式 | 做什么 | 大概耗时 |
 |---|---|---|---|
-| `job-radar-sync` | 每天定时 / 手动 Run workflow | 抓取信源、增量合并、生成预览、发送新增推送、提交 `data/` | 几分钟 |
+| `job-radar-sync` | 周一到周六快扫、周日深扫；也可手动 Run workflow | 抓取到期信源、增量合并、生成预览、发送新增推送、提交 `data/` | 快扫通常更短，深扫几分钟 |
 | `job-radar-pages` | `job-radar-sync` 成功后自动触发；push 页面/README/展示逻辑后也会触发；也可手动 | 只部署 GitHub Pages，不抓取、不推送 | 通常几十秒 |
 
 所以平时改样式、README、信息台展示，不会再跑完整抓取；真正的招聘同步只在定时或你手动点 `job-radar-sync` 时运行。
+
+同步策略不是每天全量扫所有源：
+
+- 周一到周六 `09:17`：`fast` 快扫，只跑稳定 API/HTML 源，如国聘、国家平台、央企公告、大厂/外企官网，不装浏览器。
+- 周日 `09:47`：`full` 深扫，补牛客、实习僧、飞书招聘、SPA 高校等 Playwright 慢源。
+- 手动运行时可选 `fast / slow / full / rescore`。平时想快点更新就选 `fast`，怀疑漏牛客/实习僧再选 `slow` 或 `full`。
 
 配置网页托管：
 
@@ -290,7 +297,7 @@ https://jasmine-liu-min.github.io/job-radar/
 
 4. 去 `Actions -> job-radar-sync -> Run workflow` 手动触发一次完整同步测试。
 
-成功后每天北京时间 **09:17** 左右自动运行。GitHub Actions 的定时触发可能有几分钟延迟，这是正常现象；手动触发是即时的。
+成功后周一到周六北京时间 **09:17** 左右快扫，周日北京时间 **09:47** 左右深扫。GitHub Actions 的定时触发可能有几分钟延迟，这是正常现象；手动触发是即时的。
 
 完整同步 workflow 会执行：
 
@@ -306,9 +313,9 @@ sync -> export_html -> notify_preview -> send_notify -> commit data/
 
 ### 历史数据说明
 
-`data/jobs.json` 是当前岗位库：同步时会增量合并新岗位、刷新已有岗位、处理下线岗位，并保留 `first_seen` 等时间字段。`data/notify_state.json` 记录已经推送过的岗位，保证飞书/企微只推新增。
+`data/jobs.json` 是当前岗位库：同步时会增量合并新岗位、刷新已有岗位、处理下线岗位，并保留 `first_seen` 等时间字段。`data/jobs_archive.json` 会保存下线/消失岗位的轻量归档，用于之后复盘，不进入信息台展示。`data/notify_state.json` 记录已经推送过的岗位，保证飞书/企微只推新增。
 
-如果要做“长期历史快照”，下一步可以加 `data/archive/YYYY-MM-DD.json` 或每周汇总表；当前 1.0 先保证信息台在架数据和新增推送稳定。
+如果要做更完整的长期历史快照，下一步可以再加 `data/archive/YYYY-MM-DD.json` 或每周汇总表；当前 1.0 先保证信息台在架数据、新增推送、下线轻量归档稳定。
 
 ## 信源现状
 
@@ -384,11 +391,11 @@ GitHub Actions：
 - `.github/workflows/sync.yml`：完整同步，定时或手动触发。
 - `.github/workflows/pages.yml`：轻量 Pages 部署，完整同步成功后或 push 展示层变更时触发。
 
-完整同步流程：
+同步流程：
 
 1. 定时或手动触发。
-2. 安装 Python 和 Playwright。
-3. 运行 `python3 -m job_radar.sync`。
+2. 快扫不装浏览器；深扫/慢源才安装 Playwright。
+3. 运行 `python3 scripts/sync_plan.py fast|slow|full|rescore`。
 4. 导出 `data/jobs.html`。
 5. 生成 `data/notify_preview.md`。
 6. 运行 `scripts/send_notify.py`，有 webhook secret 时发送新增摘要。

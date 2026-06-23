@@ -150,14 +150,50 @@ def _merge_incremental(current: List[Dict], store_path: str, now: str,
         out[k] = d
 
     if scoped_source_ids is not None:
-        gone_cnt = len([k for k, r in old.items()
-                        if r.get("source_id") in scoped_source_ids and k not in seen])
+        gone_rows = [r for k, r in old.items()
+                     if r.get("source_id") in scoped_source_ids and k not in seen]
     else:
-        gone_cnt = len([k for k in old if k not in seen])
+        gone_rows = [r for k, r in old.items() if k not in seen]
+    gone_cnt = len(gone_rows)
 
     jobs = sorted(out.values(), key=lambda d: d.get("match_score", 0), reverse=True)
     return {"jobs": jobs, "new": new_cnt, "gone": gone_cnt,
-            "active": len(jobs)}
+            "active": len(jobs), "gone_jobs": gone_rows}
+
+
+def _archive_gone(path: str, rows: List[Dict], now: str, limit: int = 10000) -> int:
+    """把下线/消失岗位写入轻量归档，不污染当前在架库。"""
+    if not rows:
+        return 0
+    archive: Dict[str, Dict] = {}
+    if os.path.exists(path):
+        try:
+            with open(path, encoding="utf-8") as f:
+                for r in json.load(f):
+                    key = r.get("dedup_key")
+                    if key:
+                        archive[key] = r
+        except (ValueError, OSError):
+            archive = {}
+    for r in rows:
+        key = r.get("dedup_key")
+        if not key:
+            continue
+        archive[key] = {
+            "dedup_key": key,
+            "source_id": r.get("source_id", ""),
+            "company_name": r.get("company_name", ""),
+            "title": r.get("title", ""),
+            "location": r.get("location", ""),
+            "official_url": r.get("official_url", ""),
+            "first_seen": r.get("first_seen", ""),
+            "last_seen": r.get("last_seen", ""),
+            "archived_at": now,
+            "match_score": r.get("match_score", 0),
+        }
+    vals = sorted(archive.values(), key=lambda r: r.get("archived_at", ""), reverse=True)[:limit]
+    _save_json(path, vals)
+    return len(vals)
 
 
 def _degrade(status: str, fails: int) -> str:
@@ -181,6 +217,7 @@ def run(only_adapters: Optional[set] = None, only_source_ids: Optional[set] = No
     data_dir = out_dir or DATA_DIR
     state_path = os.path.join(data_dir, "source_state.json")
     jobs_path = os.path.join(data_dir, "jobs.json")
+    archive_path = os.path.join(data_dir, "jobs_archive.json")
     run_ts = _now()
     sources = read_sources()
     state = _load_state(state_path)
@@ -290,6 +327,7 @@ def run(only_adapters: Optional[set] = None, only_source_ids: Optional[set] = No
                 " 请检查网络/权限或改用单源加性导入。"
             )
     merged = _merge_incremental([j.to_dict() for j in jobs], jobs_path, run_ts, scoped_ids)
+    archived_total = _archive_gone(archive_path, merged.get("gone_jobs", []), run_ts)
 
     # 落盘
     _save_json(jobs_path, merged["jobs"])
@@ -305,6 +343,7 @@ def run(only_adapters: Optional[set] = None, only_source_ids: Optional[set] = No
         "store_total": len(merged["jobs"]),
         "new_this_run": merged["new"],
         "gone_total": merged["gone"],
+        "archived_total": archived_total,
         "active_total": merged["active"],
         "unhealthy": [h for h in health if h.get("status") in ("unstable", "blocked")],
         "alerts": [{"source_id": h["source_id"], "alert": h["alert"]}
