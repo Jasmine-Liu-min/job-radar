@@ -67,6 +67,7 @@ python3 scripts/send_notify.py --dry-run
 | `scripts/smoke_test.py` | 最小自检 | 修改后跑，临时目录，不覆盖数据 |
 | `docs/project-map.md` | 给维护者/AI 的地图 | 快速理解边界和常见改法 |
 | `docs/file-layout.md` | 文件夹整理规则 | 不确定东西放哪时先看这里 |
+| `docs/interview-prep.md` | 面试准备稿 | 项目背景、技术选型、结果、困难、反思、问答 |
 
 ## 数据链路
 
