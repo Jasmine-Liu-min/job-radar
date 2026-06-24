@@ -273,6 +273,54 @@ python3 scripts/notify_preview.py --include-existing-due
 - 周日 `09:47`：`full` 深扫，补牛客、实习僧、飞书招聘、SPA 高校等 Playwright 慢源。
 - 手动运行时可选 `fast / slow / full / rescore`。平时想快点更新就选 `fast`，怀疑漏牛客/实习僧再选 `slow` 或 `full`。
 
+### 日常怎么操作
+
+多数时候不用手动跑，等自动任务即可：
+
+1. 每天看飞书推送：只看新增机会和即将截止重点项。
+2. 打开在线信息台：
+
+```text
+https://jasmine-liu-min.github.io/job-radar/
+```
+
+3. 在信息台里看 `27届主线`、`产品/策略`、`算法/数据`、`非互联网`、`即将截止`。
+4. 对值得投的岗位标记到投递看板，后续用 `感兴趣 -> 已投递 -> 笔试 -> 面试 -> Offer` 跟踪。
+
+需要手动刷新时：
+
+1. 打开 GitHub 仓库 `Actions`。
+2. 左侧选择 `job-radar-sync`。
+3. 点击 `Run workflow`。
+4. `plan` 按下面选：
+
+| 选项 | 什么时候用 | 会不会慢 |
+|---|---|---|
+| `fast` | 日常快速刷新，默认选它 | 较快 |
+| `slow` | 怀疑牛客、实习僧、SPA 高校漏了，只补慢源 | 慢一些 |
+| `full` | 周期性深扫或明显感觉漏很多源 | 最慢 |
+| `rescore` | 没有抓新信息，只改了排序/标签/筛选规则 | 快 |
+| `smart` | 本地脚本入口，一般不用在 Actions 里选 | 取决于当天策略 |
+
+跑完怎么看：
+
+- `job-radar-sync` 绿色：抓取、预览、推送、提交数据完成。
+- 随后 `job-radar-pages` 会自动跑一次：页面部署完成。
+- 飞书没有消息不一定是失败，可能只是没有未推过的新增。
+- Pages 刚部署完可能有 1-3 分钟缓存，手机打不开或没更新时先刷新。
+
+不建议天天手动 `full`。慢源容易被限流，也会浪费 Actions 时间；平时 `fast` 足够，周日自动 `full` 会补漏。
+
+常见情况：
+
+| 现象 | 含义 | 处理 |
+|---|---|---|
+| 飞书没收到 | 没有新增，或 webhook secret 没配/名字不对 | 先看 `Send new-only notify` 日志，再检查 `FEISHU_WEBHOOK_URL` |
+| Pages 没更新 | 轻量部署还没跑完或缓存未刷新 | 看 `job-radar-pages` 是否绿色，等 1-3 分钟刷新 |
+| `send-pack` 提示 `fetch first` | 远端有 Actions 生成的新提交 | 先 `git fetch`，再 `git rebase FETCH_HEAD`，最后重新 send-pack |
+| `Run sync plan` 很慢 | 正在跑 `slow/full` 慢源或装 Playwright | 正常等待；日常刷新用 `fast` |
+| 某个源失败 | 单源失败不会阻断其它源，会进信源健康报告 | 看信息台 `信源健康`，连续失败再处理 |
+
 配置网页托管：
 
 1. 打开 GitHub 仓库 `Settings -> Pages`。
