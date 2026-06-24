@@ -270,6 +270,7 @@ python3 scripts/notify_preview.py --include-existing-due
 同步策略不是每天全量扫所有源：
 
 - 周一到周六 `09:17`：`fast` 快扫，只跑稳定 API/HTML 源，如国聘、国家平台、央企公告、大厂/外企官网，不装浏览器。
+- 周一到周六 `12:17`：兜底 `fast` 快扫，防止 GitHub 定时排队/丢触发；new-only 推送不会重复刷屏。
 - 周日 `09:47`：`full` 深扫，补牛客、实习僧、飞书招聘、SPA 高校等 Playwright 慢源。
 - 手动运行时可选 `fast / slow / full / rescore`。平时想快点更新就选 `fast`，怀疑漏牛客/实习僧再选 `slow` 或 `full`。
 
@@ -307,6 +308,7 @@ https://jasmine-liu-min.github.io/job-radar/
 - `job-radar-sync` 绿色：抓取、预览、推送、提交数据完成。
 - 随后 `job-radar-pages` 会自动跑一次：页面部署完成。
 - 飞书没有消息不一定是失败，可能只是没有未推过的新增。
+- `data/run_status.json` 会记录最近一次同步计划、运行时间、新增数、总量和告警；这是判断“今天到底跑没跑”的心跳文件。
 - Pages 刚部署完可能有 1-3 分钟缓存，手机打不开或没更新时先刷新。
 
 不建议天天手动 `full`。慢源容易被限流，也会浪费 Actions 时间；平时 `fast` 足够，周日自动 `full` 会补漏。
@@ -345,7 +347,7 @@ https://jasmine-liu-min.github.io/job-radar/
 
 4. 去 `Actions -> job-radar-sync -> Run workflow` 手动触发一次完整同步测试。
 
-成功后周一到周六北京时间 **09:17** 左右快扫，周日北京时间 **09:47** 左右深扫。GitHub Actions 的定时触发可能有几分钟延迟，这是正常现象；手动触发是即时的。
+成功后周一到周六北京时间 **09:17** 左右快扫，**12:17** 左右兜底快扫，周日北京时间 **09:47** 左右深扫。GitHub Actions 的定时触发可能有几分钟延迟，这是正常现象；手动触发是即时的。
 
 完整同步 workflow 会执行：
 
