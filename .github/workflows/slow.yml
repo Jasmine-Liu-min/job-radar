@@ -1,11 +1,9 @@
-# 定时同步招聘信息（规划 8.1：GitHub Actions + 静态数据，零服务器零运维）。
-# 每次跑 sync 做【增量累积】（新增追加、消失标 gone、保留用户状态），
-# 再导出 jobs.html，把 data/ commit 回仓库；前端/浏览纯静态读取。
-name: job-radar-sync
+# 慢源补扫：牛客、实习僧、SPA 高校、飞书招聘等浏览器/社区源。
+name: job-radar-slow
 
 on:
   schedule:
-    - cron: "0 7 * * *"
+    - cron: "47 9 * * 3,0"
       timezone: "Asia/Shanghai"
   workflow_dispatch:
 
@@ -13,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  sync:
+  slow:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -23,8 +21,13 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run daily fast sync
-        run: python3 scripts/sync_plan.py fast
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --quiet -r requirements.txt
+          python3 -m playwright install --with-deps chromium
+
+      - name: Run slow sync
+        run: python3 scripts/sync_plan.py slow
 
       - name: Build notify preview
         env:
@@ -47,6 +50,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "无新增/变更岗位，跳过 commit"
           else
-            git commit -m "chore(data): sync jobs $(date -u +%F)"
+            git commit -m "chore(data): slow sync jobs $(date -u +%F)"
             git push
           fi

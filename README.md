@@ -63,7 +63,7 @@ python3 scripts/send_notify.py --dry-run
 | `scripts/nowcoder_discover.py` | 牛客线索发现 | 生成待审核牛客池 |
 | `scripts/notify_preview.py` | 新增推送摘要 | 控制推什么、不推什么、去重 |
 | `scripts/send_notify.py` | 飞书/企微发送 | 真实 webhook 推送入口 |
-| `scripts/sync_plan.py` | 统一刷新入口 | `core/role/full/rescore` |
+| `scripts/sync_plan.py` | 统一刷新入口 | `fast/slow/full/rescore`，Actions 固定用 `fast` |
 | `scripts/smoke_test.py` | 最小自检 | 修改后跑，临时目录，不覆盖数据 |
 | `docs/project-map.md` | 给维护者/AI 的地图 | 快速理解边界和常见改法 |
 | `docs/file-layout.md` | 文件夹整理规则 | 不确定东西放哪时先看这里 |
@@ -258,20 +258,22 @@ python3 scripts/notify_preview.py --include-existing-due
 
 ### GitHub Actions（推荐，无需开机）
 
-托管到 GitHub 后，有两条 workflow：
+托管到 GitHub 后，有三条 workflow：
 
 | Workflow | 触发方式 | 做什么 | 大概耗时 |
 |---|---|---|---|
-| `job-radar-sync` | 周一到周六快扫、周日深扫；也可手动 Run workflow | 抓取到期信源、增量合并、生成预览、发送新增推送、提交 `data/` | 快扫通常更短，深扫几分钟 |
+| `job-radar-sync` | 每天 07:00 定时；也可手动 Run workflow | 快扫稳定信源、增量合并、生成预览、发送新增推送、提交 `data/` | 通常较短 |
+| `job-radar-slow` | 每周三/周日 09:47 定时；也可手动 Run workflow | 补扫牛客、实习僧、SPA 高校、飞书招聘等慢源 | 较慢 |
 | `job-radar-pages` | `job-radar-sync` 成功后自动触发；push 页面/README/展示逻辑后也会触发；也可手动 | 只部署 GitHub Pages，不抓取、不推送 | 通常几十秒 |
 
 所以平时改样式、README、信息台展示，不会再跑完整抓取；真正的招聘同步只在定时或你手动点 `job-radar-sync` 时运行。
 
-同步策略不是每天全量扫所有源：
+GitHub Actions 定时逻辑保持和 `TechDailyPush` 一样简单：
 
-- 周一到周六 `09:17`：`fast` 快扫，只跑稳定 API/HTML 源，如国聘、国家平台、央企公告、大厂/外企官网，不装浏览器。
-- 周日 `09:47`：`full` 深扫，补牛客、实习僧、飞书招聘、SPA 高校等 Playwright 慢源。
-- 手动运行时可选 `fast / slow / full / rescore`。平时想快点更新就选 `fast`，怀疑漏牛客/实习僧再选 `slow` 或 `full`。
+- 每天 `07:00`：固定跑 `fast` 快扫。
+- `workflow_dispatch`：手动触发时也固定跑 `fast`。
+- `fast` 只跑稳定 API/HTML 源，如国聘、国家平台、央企公告、大厂/外企官网，不装浏览器。
+- 每周三/周日 `09:47`：`job-radar-slow` 固定跑 `slow`，补牛客、实习僧、SPA 高校、飞书招聘等慢源。
 
 ### 日常怎么操作
 
@@ -290,17 +292,9 @@ https://jasmine-liu-min.github.io/job-radar/
 需要手动刷新时：
 
 1. 打开 GitHub 仓库 `Actions`。
-2. 左侧选择 `job-radar-sync`。
+2. 日常快刷选 `job-radar-sync`；怀疑牛客/实习僧漏了选 `job-radar-slow`。
 3. 点击 `Run workflow`。
-4. `plan` 按下面选：
-
-| 选项 | 什么时候用 | 会不会慢 |
-|---|---|---|
-| `fast` | 日常快速刷新，默认选它 | 较快 |
-| `slow` | 怀疑牛客、实习僧、SPA 高校漏了，只补慢源 | 慢一些 |
-| `full` | 周期性深扫或明显感觉漏很多源 | 最慢 |
-| `rescore` | 没有抓新信息，只改了排序/标签/筛选规则 | 快 |
-| `smart` | 本地脚本入口，一般不用在 Actions 里选 | 取决于当天策略 |
+4. 不需要选参数，直接运行即可。
 
 跑完怎么看：
 
@@ -309,7 +303,7 @@ https://jasmine-liu-min.github.io/job-radar/
 - 飞书没有消息不一定是失败，可能只是没有未推过的新增。
 - Pages 刚部署完可能有 1-3 分钟缓存，手机打不开或没更新时先刷新。
 
-不建议天天手动 `full`。慢源容易被限流，也会浪费 Actions 时间；平时 `fast` 足够，周日自动 `full` 会补漏。
+不把慢源塞进主定时。慢源容易被限流，也会浪费 Actions 时间；平时 `fast` 兜住主源，`slow` 每周补两次，也可以手动补。
 
 常见情况：
 
@@ -318,7 +312,7 @@ https://jasmine-liu-min.github.io/job-radar/
 | 飞书没收到 | 没有新增，或 webhook secret 没配/名字不对 | 先看 `Send new-only notify` 日志，再检查 `FEISHU_WEBHOOK_URL` |
 | Pages 没更新 | 轻量部署还没跑完或缓存未刷新 | 看 `job-radar-pages` 是否绿色，等 1-3 分钟刷新 |
 | `send-pack` 提示 `fetch first` | 远端有 Actions 生成的新提交 | 先 `git fetch`，再 `git rebase FETCH_HEAD`，最后重新 send-pack |
-| `Run sync plan` 很慢 | 正在跑 `slow/full` 慢源或装 Playwright | 正常等待；日常刷新用 `fast` |
+| `job-radar-slow` 很慢 | 正在装 Playwright 或慢源响应慢 | 正常等待；主链路 `job-radar-sync` 不受影响 |
 | 某个源失败 | 单源失败不会阻断其它源，会进信源健康报告 | 看信息台 `信源健康`，连续失败再处理 |
 
 配置网页托管：
@@ -343,9 +337,9 @@ https://jasmine-liu-min.github.io/job-radar/
 | `WECHAT_WEBHOOK_URL` | 企业微信机器人 webhook |
 | `WECOM_WEBHOOK_URL` | 企业微信机器人 webhook，备用别名 |
 
-4. 去 `Actions -> job-radar-sync -> Run workflow` 手动触发一次完整同步测试。
+4. 去 `Actions -> job-radar-sync -> Run workflow` 手动触发一次快扫测试；需要时再去 `job-radar-slow -> Run workflow` 测慢源。
 
-成功后周一到周六北京时间 **09:17** 左右快扫，周日北京时间 **09:47** 左右深扫。GitHub Actions 的定时触发可能有几分钟延迟，这是正常现象；手动触发是即时的。
+成功后每天北京时间 **07:00** 左右自动快扫，周三/周日北京时间 **09:47** 左右自动慢源补扫。GitHub Actions 的定时触发可能有几分钟延迟，这是正常现象；手动触发是即时的。
 
 完整同步 workflow 会执行：
 
@@ -437,13 +431,14 @@ python3 scripts/smoke_test.py
 GitHub Actions：
 
 - `.github/workflows/sync.yml`：完整同步，定时或手动触发。
+- `.github/workflows/slow.yml`：慢源补扫，定时或手动触发。
 - `.github/workflows/pages.yml`：轻量 Pages 部署，完整同步成功后或 push 展示层变更时触发。
 
 同步流程：
 
 1. 定时或手动触发。
-2. 快扫不装浏览器；深扫/慢源才安装 Playwright。
-3. 运行 `python3 scripts/sync_plan.py fast|slow|full|rescore`。
+2. 不安装 Playwright，保持主链路轻量。
+3. 运行 `python3 scripts/sync_plan.py fast`。
 4. 导出 `data/jobs.html`。
 5. 生成 `data/notify_preview.md`。
 6. 运行 `scripts/send_notify.py`，有 webhook secret 时发送新增摘要。
