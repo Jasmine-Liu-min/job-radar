@@ -81,34 +81,13 @@ def _run_sources(label: str, ids: set[str]) -> None:
     if not ids:
         raise SystemExit(f"{label} 没有可运行信源")
     print(f"🚦 {label}: {len(ids)} 个信源")
-    report = sync.run(only_source_ids=ids, preserve_unselected=True)
-    _write_run_status(label, report)
+    sync.run(only_source_ids=ids, preserve_unselected=True)
     export_html.main()
 
 
 def _is_deep_day() -> bool:
     now = dt.datetime.now(ZoneInfo("Asia/Shanghai"))
     return now.weekday() == 6  # Sunday
-
-
-def _write_run_status(plan: str, report: dict) -> None:
-    status_path = os.path.join(sync.DATA_DIR, "run_status.json")
-    payload = {
-        "plan": plan,
-        "ran_at": dt.datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(),
-        "generated_at": report.get("generated_at", ""),
-        "sources_total": report.get("sources_total", 0),
-        "jobs_raw": report.get("jobs_raw", 0),
-        "store_total": report.get("store_total", 0),
-        "new_this_run": report.get("new_this_run", 0),
-        "gone_total": report.get("gone_total", 0),
-        "alerts": report.get("alerts", []),
-        "unhealthy_count": len(report.get("unhealthy", [])),
-    }
-    os.makedirs(os.path.dirname(status_path), exist_ok=True)
-    with open(status_path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
-    print(f"运行心跳已写入：{status_path}")
 
 
 def rescore() -> None:
@@ -158,22 +137,11 @@ def run_plan(plan: str) -> None:
         export_html.main()
         return
     if plan == "full":
-        report = sync.run(preserve_unselected=True)
-        _write_run_status("深扫", report)
+        sync.run(preserve_unselected=True)
         export_html.main()
         return
     if plan == "rescore":
         rescore()
-        _write_run_status("重算展示", {
-            "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(),
-            "sources_total": 0,
-            "jobs_raw": 0,
-            "store_total": 0,
-            "new_this_run": 0,
-            "gone_total": 0,
-            "alerts": [],
-            "unhealthy": [],
-        })
         return
     raise SystemExit(f"未知 plan: {plan}")
 

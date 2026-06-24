@@ -2,15 +2,11 @@
 # 每次跑 sync 做【增量累积】（新增追加、消失标 gone、保留用户状态），
 # 再导出 jobs.html，把 data/ commit 回仓库；前端/浏览纯静态读取。
 name: job-radar-sync
-run-name: job-radar-sync / ${{ inputs.plan || github.event.schedule || 'manual' }}
 
 on:
   schedule:
     # 周一到周六北京时间 09:17 快扫，不跑浏览器慢源。
     - cron: "17 9 * * 1-6"
-      timezone: "Asia/Shanghai"
-    # 周一到周六北京时间 12:17 兜底快扫；new-only 推送不会重复刷屏。
-    - cron: "17 12 * * 1-6"
       timezone: "Asia/Shanghai"
     # 周日北京时间 09:47 深扫，补牛客/实习僧/SPA 高校等慢源。
     - cron: "47 9 * * 0"
