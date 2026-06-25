@@ -71,3 +71,6 @@ nk-campus,牛客网·校招,aggregator,community,nowcoder,https://www.nowcoder.c
 sxs-intern,实习僧,aggregator,community,shixiseng,https://www.shixiseng.com/interns,2,playwright,no,全国,720,active,实习僧·浏览器渲染(薪资字体加密略)
 cn-icbc,工商银行,finance,official,public_notice,https://job.icbc.com.cn/,2,html,no,全国,1440,blocked,公告/SPA，需 per-site 适配
 cn-sinopec,中国石化,soe,official,public_notice,https://job.sinopec.com/,3,html,no,全国,1440,blocked,公告类，需 AI 抽取
+cn-huawei-campus,华为(校招),tech,official,huawei,https://career.huawei.com/,1,api,no,深圳·上海·东莞·西安·南京,360,active,华为校园招聘门户·27届提前批主战场·抓包接口~240
+cn-meituan-campus,美团(校招),internet,official,meituan,https://campus.meituan.com/,1,api,no,北京·上海·成都,360,active,美团校园招聘·抓包接口~200
+cn-catl,宁德时代,tech,official,beisen,zhaopin.atlbattery.com|SU5ff30f5b9b0d78e6f4283a0b,1,api,no,宁德·常州·上海·厦门,360,active,新能源电池龙头·北森ATS(抓包发现)·电芯/仿真/数据~121

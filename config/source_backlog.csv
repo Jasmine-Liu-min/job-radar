@@ -32,3 +32,6 @@ priority,source_id,name,type,url,status,next_action,notes
 1,cn-bcg-campus,BCG校园招聘,official,https://careers.bcg.com/,manual_import,import_feed --source-id cn-bcg-campus,咨询/战略/数字化，官网与公众号并行
 1,cn-deloitte-campus,德勤校园招聘,official,https://www2.deloitte.com/cn/zh/careers/students.html,manual_import,import_feed --source-id cn-deloitte-campus,咨询/审计/数字化/风险咨询
 1,cn-pwc-campus,普华永道校园招聘,official,https://www.pwccn.com/zh/careers/students.html,manual_import,import_feed --source-id cn-pwc-campus,咨询/审计/管理咨询/数据
+1,cn-inovance-campus,汇川技术,official,https://inovance.zhiye.com/Campus,research,extract beisen SU,北森新版·工业自动化·SU待提取
+1,cn-gigadevice-campus,兆易创新,official,https://gigadevice.hotjob.cn/,research,extract beisen SU,北森·半导体存储/MCU·SU待提取
+2,cn-eve-campus,亿纬锂能,official,https://www.evebattery.com/campus-recruitment-process,blocked,51job adapter,新能源电池·走51job网申

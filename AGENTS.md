@@ -48,7 +48,7 @@ python3 -m job_radar.sync         # 跑通完整链路
 
 - **加信源**：先看 `config/sources.csv` 的 `adapter` 列有没有现成的；有就只加一行 CSV。
 - **加信源类型**：在 `adapters/` 新建模块，实现 `def fetch(endpoint) -> List[RawJob]`，
-  顶部 `@register("名字")`，并在 `adapters/__init__.py` 末尾的 import 列表里加上模块名。
+  顶部 `@register("名字")` 即可——`adapters/__init__.py` 会**自动发现并导入**同目录的非下划线模块，无需手动维护 import 列表。
 - **嗅探大厂接口**（最佳路子）：用 Playwright 抓包看页面调的列表 JSON 接口，直接打它。
   已这样接通 腾讯校招门户(join.qq.com)、网易(hr.163.com)、牛客(square-search)。优先于 DOM 解析。
 - **校招/实习/社招 分类 + 工作台**：分类在 `scripts/export_html.py::_kind`（标题关键词+信源），

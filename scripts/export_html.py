@@ -325,6 +325,22 @@ main.health{display:block;max-width:1180px}
 .htable th{color:var(--ash);font-weight:500;background:var(--fog)}
 .htable tr:last-child td{border-bottom:0}
 .hbad{color:var(--red);font-weight:500}.hok{color:var(--green);font-weight:500}.hmuted{color:var(--graphite)}
+/* 导入 */
+main.import{display:block;max-width:1000px}
+.impwrap{display:flex;flex-direction:column;gap:14px}
+.impcard{background:var(--canvas);border-radius:var(--radius-card);box-shadow:var(--shadow);padding:18px 20px}
+.impcard h2{margin:0 0 6px;font-size:16px}
+.impcard p{margin:4px 0;color:var(--ash);font-size:12.5px}
+.imparea{width:100%;min-height:120px;background:var(--fog);border:1px solid var(--bd2);border-radius:var(--radius-in);
+  color:var(--ink);font:12.5px/1.6 inherit;padding:10px;resize:vertical;outline:none}
+.imparea:focus{border-color:var(--ink)}
+.improw{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.impkey{flex:1;min-width:220px;background:var(--fog);border:1px solid var(--bd2);border-radius:9999px;padding:8px 13px;font-size:12px;outline:none}
+.impbtn{cursor:pointer;background:var(--ink);color:#fff;border:none;border-radius:9999px;padding:9px 18px;font-size:13px}
+.impbtn.ghost{background:var(--canvas);color:var(--ash);border:1px solid var(--bd2)}
+.impbtn:hover{opacity:.9}
+.impmsg{font-size:12px;color:var(--clay-dk);margin-top:8px;min-height:16px}
+.implist{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin-top:8px}
 /* 信息台 */
 main.station{display:block;max-width:1240px}
 .dash{display:grid;gap:16px}
@@ -463,8 +479,8 @@ function fitLevel(r){
 const MAIN_TABS=[{k:"station",label:"信息台"},{k:"c27",label:"27届主线"},{k:"nonnet",label:"非互联网"},
             {k:"convert",label:"转正候选"},{k:"hunan",label:"湖南/长沙"},
             {k:"product",label:"产品/策略"},{k:"algo",label:"算法/数据"},
-            {k:"due",label:"即将截止"},{k:"board",label:"投递看板"},{k:"health",label:"信源健康"}];
-const MORE_TABS=[{k:"advance",label:"提前批"},{k:"autumn",label:"秋招"},
+            {k:"due",label:"即将截止"},{k:"board",label:"投递看板"},{k:"import",label:"📥导入"},{k:"health",label:"信源健康"}];
+const MORE_TABS=[{k:"advance",label:"提前批/暑期(现在投)"},{k:"autumn",label:"秋招"},
             {k:"spring",label:"春招/补录"},{k:"summer",label:"暑期实习"},{k:"event",label:"宣讲/活动"},
             {k:"c27gov",label:"27届央企"},{k:"aipm",label:"AI产品"},{k:"strategy_pm",label:"策略产品"},
             {k:"decision",label:"决策支持"},{k:"datasci",label:"数据科学"},{k:"mining",label:"数据挖掘"},
@@ -481,6 +497,7 @@ function healthAttentionCount(){
 }
 function predTab(r,k){const st=stOf(r.id);
   if(k==="station")return false;
+  if(k==="import")return false;
   if(k==="health")return false;
   if(k==="ignored")return st==="ignored";
   if(k==="board")return PIPELINE.has(st);
@@ -489,7 +506,7 @@ function predTab(r,k){const st=stOf(r.id);
   const base=!r.gone&&st!=="ignored"&&!r.bc&&!r.lq&&!expired(r); // 通用可见（非下线/忽略/蓝领/低质/过期）
   if(k==="c27")return base&&r.cyc==="2027";
   if(k==="nonnet")return base&&r.ind!=="互联网/软件"&&(r.cyc==="2027"||r.gv||r.cat==="国家平台"||r.cat==="高校");
-  if(k==="advance")return base&&r.cyc==="2027"&&r.stage==="提前批";
+  if(k==="advance")return base&&r.cyc==="2027"&&(r.stage==="提前批"||r.stage==="暑期实习");
   if(k==="autumn")return base&&r.cyc==="2027"&&r.stage==="秋招";
   if(k==="spring")return base&&r.cyc==="2027"&&r.stage==="春招/补录";
   if(k==="summer")return base&&r.cyc==="2027"&&r.stage==="暑期实习";
@@ -529,7 +546,7 @@ function renderTabs(){const box=document.getElementById("tabs");box.innerHTML=""
   renderRegionTabs();}
 // 地区 Tab（单选，计数随当前视图 Tab 联动）
 function renderRegionTabs(){const box=document.getElementById("rtabs");box.innerHTML="";
-  if(tab==="station"||tab==="health"||tab==="board"){return;}
+  if(tab==="station"||tab==="health"||tab==="board"||tab==="import"){return;}
   const present=REGION_ORDER.filter(r=>DATA.some(x=>x.reg===r));
   ["all",...present].forEach(r=>{
     const n=compact(DATA.filter(x=>predTab(x,tab)&&(r==="all"||x.reg===r))).length;
@@ -601,10 +618,11 @@ function diversifyRows(rows){
 function render(){
   const list=document.getElementById("list");
   if(tab==="station"){renderStation();return;}
+  if(tab==="import"){renderImport();return;}
   if(tab==="board"){list.classList.add("board");renderBoard();return;}
   if(tab==="health"){renderHealth();return;}
   list.classList.remove("board");
-  list.classList.remove("health");
+  list.classList.remove("health");list.classList.remove("import");
   let rows=compact(DATA.filter(match));
   const sk=tab==="due"?"dl":fSort;  // 即将截止 Tab 默认按最近截止排
   rows.sort((a,b)=>sk==="pub"?(b.pub||"").localeCompare(a.pub||"")
@@ -753,6 +771,92 @@ function intelligenceState(){
     {k:"牛客URL", n:INBOX.nowcoder_urls||0, note:"待打开原帖核验"},
     {k:"审核台", n:INBOX.review_html?"已生成":"未生成", note:"审核后才入库"},
   ];
+}
+// ===== 导入 Tab：粘贴公众号正文/链接 → 规则抽取，或有 API Key 时用 AI 抽取 =====
+function impGet(){try{return JSON.parse(localStorage.getItem("jobradar_imported")||"[]")}catch(e){return[]}}
+function impSet(a){localStorage.setItem("jobradar_imported",JSON.stringify(a))}
+function impKeyVal(){return localStorage.getItem("jobradar_aikey")||""}
+function impRuleExtract(text){
+  const out=[];
+  const linkRe=/https?:\\/\\/[^\\s）)】」"']+/g;
+  const dateRe=/(20\\d{2}[.\\/年-]\\d{1,2}[.\\/月-]\\d{1,2}|\\d{1,2}\\s*月\\s*\\d{1,2}\\s*日|截止[:：]?\\s*\\d{1,2}[.\\/月-]\\d{1,2})/;
+  const orgRe=/[\\u4e00-\\u9fa5A-Za-z0-9（）()·]{2,28}?(公司|集团|股份|有限|科技|银行|研究院|研究所|大学|学院|医院|证券|基金|保险|电力|能源|半导体|生物|制药|医药|通信|网络|汽车|新能源|电池|芯片)/;
+  const titleHint=/(工程师|实习生|实习|算法|数据|分析师|研究员|开发|经理|专员|管培|培训生|科学家|架构师|产品)/;
+  let blocks=text.split(/\\n{2,}/).map(b=>b.trim()).filter(b=>b.length>4);
+  if(blocks.length<2)blocks=text.split(/\\n/).map(b=>b.trim()).filter(b=>b.length>4);
+  blocks.forEach(b=>{
+    const lk=b.match(linkRe), dt=b.match(dateRe), org=b.match(orgRe);
+    const lines=b.split(/\\n/); let title="";
+    for(const l of lines){if(titleHint.test(l)){title=l.trim().slice(0,60);break;}}
+    if(!title&&titleHint.test(b))title=lines[0].slice(0,60);
+    if(!title&&!org&&!lk)return;
+    out.push({company:org?org[0]:"",title:title||lines[0].slice(0,40),location:"",
+              url:lk?lk[0]:"",deadline:dt?dt[0]:"",jd:b.slice(0,400)});
+  });
+  return out;
+}
+async function impAIExtract(text,key){
+  const body={model:"claude-haiku-4-5",max_tokens:2000,messages:[{role:"user",
+    content:"从下面的招聘推文/文本中抽取所有岗位，只返回 JSON 数组，每项字段 company,title,location,deadline,url（缺失留空字符串），不要任何解释或前后缀：\\n\\n"+text.slice(0,12000)}]};
+  const r=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{
+    "content-type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01",
+    "anthropic-dangerous-direct-browser-access":"true"},body:JSON.stringify(body)});
+  const j=await r.json();
+  const txt=(j.content&&j.content[0]&&j.content[0].text)||"";
+  const m=txt.match(/\\[[\\s\\S]*\\]/);
+  return JSON.parse(m?m[0]:txt);
+}
+function renderImport(){
+  const list=document.getElementById("list");
+  list.classList.remove("board");list.classList.remove("health");list.classList.add("import");
+  const items=impGet();
+  list.innerHTML='<div class="impwrap"><div class="impcard"><h2>📥 导入公众号/链接</h2>'+
+    '<p>把校招推文<b>正文</b>或<b>链接</b>粘进来（手机上「复制链接」或长按复制正文）。默认<b>规则</b>抽取；填了 API Key 则用 <b>AI</b> 抽取（更准）。数据只存你本机浏览器。</p>'+
+    '<textarea id="impText" class="imparea" placeholder="粘贴推文正文 / 一个或多个链接（一行一个）…"></textarea>'+
+    '<div class="improw"><input id="impKey" class="impkey" type="password" placeholder="可选：Claude API Key（sk-ant-… 仅存本机，用于 AI 抽取）"'+(impKeyVal()?' value="********"':'')+'>'+
+    '<button class="impbtn" id="impGo">解析导入</button>'+
+    '<button class="impbtn ghost" id="impCmd">复制命令行(抓链接)</button></div>'+
+    '<div class="impmsg" id="impMsg"></div></div>'+
+    '<div class="impcard"><h2>已导入 <b>'+items.length+'</b> 条线索</h2><div class="implist" id="impList"></div></div></div>';
+  const keyEl=document.getElementById("impKey");
+  keyEl.addEventListener("change",()=>{const v=keyEl.value.trim();if(v&&v!=="********")localStorage.setItem("jobradar_aikey",v);});
+  document.getElementById("impCmd").onclick=()=>{
+    const t=document.getElementById("impText").value;
+    const links=(t.match(/https?:\\/\\/[^\\s]+/g)||[]);
+    const msg=document.getElementById("impMsg");
+    if(!links.length){msg.textContent="没识别到链接——链接才需命令行；纯正文请直接点「解析导入」。";return;}
+    const cmd="python3 scripts/import_feed.py --preset wechat --url "+links.join(" ");
+    if(navigator.clipboard)navigator.clipboard.writeText(cmd);
+    msg.textContent="已复制命令到剪贴板，去终端运行（会抓取正文+打分+并入正式库，比浏览器更完整）。";
+  };
+  document.getElementById("impGo").onclick=async()=>{
+    const t=document.getElementById("impText").value.trim();
+    const msg=document.getElementById("impMsg");
+    if(!t){msg.textContent="先粘点东西。";return;}
+    const stripped=t.replace(/https?:\\/\\/[^\\s]+/g,"").trim();
+    if(stripped.length<10&&/https?:\\/\\//.test(t)){msg.textContent="只有链接：浏览器抓不了公众号正文(跨域)。请点「复制命令行(抓链接)」用终端跑；或把推文正文复制进来直接解析。";return;}
+    let jobs=[];const key=impKeyVal();
+    if(key){msg.textContent="AI 抽取中…";try{jobs=await impAIExtract(t,key);}catch(e){msg.textContent="AI 调用失败("+e+")，改用规则。";jobs=impRuleExtract(t);}}
+    else{jobs=impRuleExtract(t);}
+    if(!jobs||!jobs.length){msg.textContent="没抽到岗位，换段更完整的正文再试。";return;}
+    const cur=impGet();const seen=new Set(cur.map(x=>(x.url||"")+(x.company||"")+(x.title||"")));
+    let add=0;
+    jobs.forEach(j=>{const k=(j.url||"")+(j.company||"")+(j.title||"");if(seen.has(k))return;seen.add(k);
+      cur.unshift({id:"imp"+Date.now()+add,company:j.company||"",title:j.title||"",location:j.location||"",deadline:j.deadline||"",url:j.url||"",jd:j.jd||"",added:today()});add++;});
+    impSet(cur);msg.textContent="已导入 "+add+" 条（"+(key?"AI":"规则")+"抽取）。";
+    document.getElementById("impText").value="";renderImport();
+  };
+  const lb=document.getElementById("impList");
+  items.forEach(it=>{
+    const c=document.createElement("div");c.className="card t1";
+    c.innerHTML='<div class="chead"><div class="ctitle">'+esc(it.title||"(无标题)")+'</div></div>'+
+      (it.company?'<div class="cco">'+esc(it.company)+'</div>':"")+
+      '<div class="cmeta">'+(it.location?esc(it.location):"")+(it.deadline?'<span class="dot">·</span>截止 '+esc(it.deadline):"")+'<span class="dot">·</span>导入 '+esc(it.added||"")+'</div>'+
+      (it.url?'<div class="foot"><a class="go" href="'+esc(it.url)+'" target="_blank">原链接 ↗</a></div>':"");
+    const del=document.createElement("button");del.className="btn";del.textContent="删除";del.style.marginTop="6px";
+    del.onclick=()=>{impSet(impGet().filter(x=>x.id!==it.id));renderImport();};
+    c.appendChild(del);lb.appendChild(c);
+  });
 }
 function renderStation(){
   const list=document.getElementById("list");list.innerHTML="";
