@@ -91,8 +91,22 @@
       "company": "国药数字科技（北京）有限公司",
       "title": "AI产品经理",
       "source_id": "cn-iguopin"
+    },
+    "1dc1a6ced02607ad": {
+      "pushed_at": "2026-06-26T00:18:04.725986+00:00",
+      "first_seen": "2026-06-26T00:08:44.173870+00:00",
+      "company": "网易",
+      "title": "产品运营实习生（演出票务）",
+      "source_id": "cn-netease"
+    },
+    "f734f9e420714cf3": {
+      "pushed_at": "2026-06-26T00:18:04.725986+00:00",
+      "first_seen": "2026-06-26T00:08:44.173870+00:00",
+      "company": "网易",
+      "title": "音乐策略运营实习生（北京）",
+      "source_id": "cn-netease"
     }
   },
-  "last_marked_at": "2026-06-23T11:40:15.201362+00:00",
-  "last_marked_count": 13
+  "last_marked_at": "2026-06-26T00:18:04.725986+00:00",
+  "last_marked_count": 2
 }
