@@ -105,8 +105,15 @@
       "company": "网易",
       "title": "音乐策略运营实习生（北京）",
       "source_id": "cn-netease"
+    },
+    "4d685dfd188c972f": {
+      "pushed_at": "2026-06-27T00:13:54.428440+00:00",
+      "first_seen": "2026-06-27T00:06:18.281584+00:00",
+      "company": "地平线",
+      "title": "智驾产品传播专家",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-06-26T00:18:04.725986+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-06-27T00:13:54.428440+00:00",
+  "last_marked_count": 1
 }
