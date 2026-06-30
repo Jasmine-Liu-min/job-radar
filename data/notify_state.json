@@ -112,8 +112,36 @@
       "company": "地平线",
       "title": "智驾产品传播专家",
       "source_id": "cn-horizon"
+    },
+    "7981faf4e4e324f6": {
+      "pushed_at": "2026-06-30T00:10:47.492196+00:00",
+      "first_seen": "2026-06-30T00:03:53.068088+00:00",
+      "company": "网易",
+      "title": "内容分发运营实习生",
+      "source_id": "cn-netease"
+    },
+    "bbf1e50818702c95": {
+      "pushed_at": "2026-06-30T00:10:47.492196+00:00",
+      "first_seen": "2026-06-30T00:03:53.068088+00:00",
+      "company": "网易",
+      "title": "达人营销实习生（网易云音乐）",
+      "source_id": "cn-netease"
+    },
+    "9191d669c19af6c8": {
+      "pushed_at": "2026-06-30T00:10:47.492196+00:00",
+      "first_seen": "2026-06-30T00:03:53.068088+00:00",
+      "company": "中国南方电网有限责任公司共享运营公司",
+      "title": "2026年第二批社会招聘公告",
+      "source_id": "gov-sasac"
+    },
+    "a68bc60e73b6e85d": {
+      "pushed_at": "2026-06-30T00:10:47.492196+00:00",
+      "first_seen": "2026-06-30T00:03:53.068088+00:00",
+      "company": "地平线",
+      "title": "动态感知算法专家",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-06-27T00:13:54.428440+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-06-30T00:10:47.492196+00:00",
+  "last_marked_count": 4
 }
