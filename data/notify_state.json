@@ -154,8 +154,22 @@
       "company": "网易",
       "title": "项目管理实习生",
       "source_id": "cn-netease"
+    },
+    "b8b9230bcc19e73b": {
+      "pushed_at": "2026-07-01T06:14:59.842069+00:00",
+      "first_seen": "2026-07-01T00:04:45.443994+00:00",
+      "company": "网易",
+      "title": "运营实习生",
+      "source_id": "cn-netease"
+    },
+    "c552100d747ec764": {
+      "pushed_at": "2026-07-01T06:14:59.842069+00:00",
+      "first_seen": "2026-07-01T00:04:45.443994+00:00",
+      "company": "网易",
+      "title": "达人营销实习生",
+      "source_id": "cn-netease"
     }
   },
-  "last_marked_at": "2026-07-01T00:13:42.031559+00:00",
+  "last_marked_at": "2026-07-01T06:14:59.842069+00:00",
   "last_marked_count": 2
 }
