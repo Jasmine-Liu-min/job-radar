@@ -168,8 +168,22 @@
       "company": "网易",
       "title": "达人营销实习生",
       "source_id": "cn-netease"
+    },
+    "15ddab0be91c7914": {
+      "pushed_at": "2026-07-02T00:14:25.544937+00:00",
+      "first_seen": "2026-07-02T00:06:19.078836+00:00",
+      "company": "网易",
+      "title": "商业化运营实习生",
+      "source_id": "cn-netease"
+    },
+    "57fae958bd0815ac": {
+      "pushed_at": "2026-07-02T00:14:25.544937+00:00",
+      "first_seen": "2026-07-02T00:06:19.078836+00:00",
+      "company": "网易",
+      "title": "版权运营实习生（子弹工作室）",
+      "source_id": "cn-netease"
     }
   },
-  "last_marked_at": "2026-07-01T06:14:59.842069+00:00",
+  "last_marked_at": "2026-07-02T00:14:25.544937+00:00",
   "last_marked_count": 2
 }
