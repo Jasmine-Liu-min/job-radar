@@ -2,18 +2,18 @@
   "ashby-posthog": {
     "consecutive_failures": 0,
     "status": "active",
-    "last_success_at": "2026-07-01T06:10:51.751209+00:00",
+    "last_success_at": "2026-07-05T05:47:47.595783+00:00",
     "last_error": "",
-    "last_count": 20,
-    "peak_count": 20,
+    "last_count": 21,
+    "peak_count": 21,
     "alert": ""
   },
   "gh-gitlab": {
     "consecutive_failures": 0,
     "status": "active",
-    "last_success_at": "2026-07-01T06:10:52.048665+00:00",
+    "last_success_at": "2026-07-05T05:47:47.827319+00:00",
     "last_error": "",
-    "last_count": 136,
+    "last_count": 142,
     "peak_count": 142,
     "alert": ""
   },
@@ -83,7 +83,7 @@
   "edu-fudan": {
     "consecutive_failures": 0,
     "status": "active",
-    "last_success_at": "2026-07-01T06:11:26.717191+00:00",
+    "last_success_at": "2026-07-05T05:48:14.057328+00:00",
     "last_error": "",
     "last_count": 31,
     "peak_count": 36,
@@ -92,17 +92,17 @@
   "edu-nju": {
     "consecutive_failures": 0,
     "status": "active",
-    "last_success_at": "2026-07-01T06:11:59.284886+00:00",
+    "last_success_at": "2026-07-05T05:48:46.629110+00:00",
     "last_error": "",
     "last_count": 10,
     "peak_count": 11,
     "alert": ""
   },
   "edu-sjtu": {
-    "consecutive_failures": 0,
+    "consecutive_failures": 1,
     "status": "active",
     "last_success_at": "2026-07-01T06:12:29.342543+00:00",
-    "last_error": "",
+    "last_error": "RuntimeError: 未捕获到上交就业日历接口响应（反爬挑战或接口变更）",
     "last_count": 0,
     "peak_count": 11,
     "alert": "抓取量跌为 0（历史峰值 11，疑似改版/失效）"
@@ -155,7 +155,7 @@
   "cn-nio": {
     "consecutive_failures": 0,
     "status": "active",
-    "last_success_at": "2026-07-01T06:11:04.580607+00:00",
+    "last_success_at": "2026-07-05T05:47:58.236546+00:00",
     "last_error": "",
     "last_count": 10,
     "peak_count": 10,
@@ -290,28 +290,28 @@
   "nk-intern": {
     "consecutive_failures": 0,
     "status": "active",
-    "last_success_at": "2026-07-01T06:13:31.142926+00:00",
+    "last_success_at": "2026-07-05T05:50:59.257930+00:00",
     "last_error": "",
-    "last_count": 18,
+    "last_count": 19,
     "peak_count": 19,
     "alert": ""
   },
   "nk-campus": {
     "consecutive_failures": 0,
     "status": "active",
-    "last_success_at": "2026-07-01T06:14:31.675811+00:00",
+    "last_success_at": "2026-07-05T05:52:51.451740+00:00",
     "last_error": "",
-    "last_count": 19,
+    "last_count": 16,
     "peak_count": 20,
     "alert": ""
   },
   "sxs-intern": {
     "consecutive_failures": 0,
     "status": "active",
-    "last_success_at": "2026-07-01T06:14:56.705555+00:00",
+    "last_success_at": "2026-07-05T05:53:19.820409+00:00",
     "last_error": "",
-    "last_count": 150,
-    "peak_count": 150,
+    "last_count": 151,
+    "peak_count": 151,
     "alert": ""
   },
   "cn-iguopin": {
