@@ -273,8 +273,22 @@
       "company": "网易",
       "title": "产品运营实习生（LOFTER/视频产品）",
       "source_id": "cn-netease"
+    },
+    "83a4d1eb8593d91f": {
+      "pushed_at": "2026-07-10T00:11:37.452054+00:00",
+      "first_seen": "2026-07-10T00:04:28.583821+00:00",
+      "company": "地平线",
+      "title": "高阶主动安全模型算法工程师",
+      "source_id": "cn-horizon"
+    },
+    "d387ce23ec495c00": {
+      "pushed_at": "2026-07-10T00:11:37.452054+00:00",
+      "first_seen": "2026-07-10T00:04:28.583821+00:00",
+      "company": "地平线",
+      "title": "泊车超声波雷达（USS）专家",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-07-09T00:16:49.747279+00:00",
+  "last_marked_at": "2026-07-10T00:11:37.452054+00:00",
   "last_marked_count": 2
 }
