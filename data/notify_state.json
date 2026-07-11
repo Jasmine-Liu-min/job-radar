@@ -287,8 +287,22 @@
       "company": "地平线",
       "title": "泊车超声波雷达（USS）专家",
       "source_id": "cn-horizon"
+    },
+    "fa8f8288eb99b326": {
+      "pushed_at": "2026-07-11T00:05:47.375017+00:00",
+      "first_seen": "2026-07-10T23:56:54.624064+00:00",
+      "company": "地平线",
+      "title": "自动驾驶项目管理实习生",
+      "source_id": "cn-horizon"
+    },
+    "1a8437fa860ce27d": {
+      "pushed_at": "2026-07-11T00:05:47.375017+00:00",
+      "first_seen": "2026-07-10T23:56:54.624064+00:00",
+      "company": "地平线",
+      "title": "HSA自动驾驶感知算法工程师",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-07-10T00:11:37.452054+00:00",
+  "last_marked_at": "2026-07-11T00:05:47.375017+00:00",
   "last_marked_count": 2
 }
