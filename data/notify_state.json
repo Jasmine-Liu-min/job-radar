@@ -301,8 +301,22 @@
       "company": "地平线",
       "title": "HSA自动驾驶感知算法工程师",
       "source_id": "cn-horizon"
+    },
+    "366f7a1de12a2161": {
+      "pushed_at": "2026-07-12T00:03:54.818536+00:00",
+      "first_seen": "2026-07-11T23:54:19.737298+00:00",
+      "company": "地平线",
+      "title": "感知/端到端方向算法实习生",
+      "source_id": "cn-horizon"
+    },
+    "a70de759fa43b717": {
+      "pushed_at": "2026-07-12T00:03:54.818536+00:00",
+      "first_seen": "2026-07-11T23:54:19.737298+00:00",
+      "company": "地平线",
+      "title": "自动驾驶规控算法实习生",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-07-11T00:05:47.375017+00:00",
+  "last_marked_at": "2026-07-12T00:03:54.818536+00:00",
   "last_marked_count": 2
 }

@@ -1,8 +1,7 @@
-# Job Radar｜2026-07-11 新增机会
+# Job Radar｜2026-07-12 新增机会
 
-未推新增 547 条，其中 27届 3 条。
+未推新增 77 条，其中 27届 0 条。
 重点候选 0 条；非互联网产品/数据 0 条；7天内截止 2 条。
-已自动过滤历史推送 3 条。
 
 信息台：https://jasmine-liu-min.github.io/job-radar/
 
@@ -15,12 +14,12 @@
 - 暂无
 
 ## 新增7天内截止
-- 地平线｜自动驾驶项目管理实习生
-  产品/策略｜匹配 144｜2026-07-18，剩 7 天
-  https://wecruit.hotjob.cn/SU6409ef49bef57c635fd390a6/pb/posDetail.html?postId=6a509a6b53b4650cd31af933
-- 地平线｜HSA自动驾驶感知算法工程师
-  算法｜匹配 149｜2026-07-18，剩 7 天
-  https://wecruit.hotjob.cn/SU6409ef49bef57c635fd390a6/pb/posDetail.html?postId=6a2638443d5b657f38bbd838
+- 地平线｜感知/端到端方向算法实习生
+  算法｜匹配 143｜2026-07-19，剩 7 天
+  https://wecruit.hotjob.cn/SU6409ef49bef57c635fd390a6/pb/posDetail.html?postId=69a940618e515379dc081ea4
+- 地平线｜自动驾驶规控算法实习生
+  算法｜匹配 143｜2026-07-19，剩 7 天
+  https://wecruit.hotjob.cn/SU6409ef49bef57c635fd390a6/pb/posDetail.html?postId=69a940608e515379dc081e53
 
 ## 新增待补截止
 - 暂无
