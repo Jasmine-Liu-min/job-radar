@@ -1,35 +1,29 @@
-# Job Radar｜2026-07-12 新增机会
+# Job Radar｜2026-07-13 新增机会
 
-未推新增 177 条，其中 27届 2 条。
-重点候选 2 条；非互联网产品/数据 2 条；7天内截止 0 条。
+未推新增 271 条，其中 27届 3 条。
+重点候选 0 条；非互联网产品/数据 0 条；7天内截止 3 条。
+已自动过滤历史推送 2 条。
 
 信息台：https://jasmine-liu-min.github.io/job-radar/
 
 线索池：牛客待审核 138 条；信源需关注 9 个。
 
 ## 新增优先看
-- 牛客网·实习｜数据分析师（2027届）
-  数据｜匹配 91｜缺截止
-  https://www.nowcoder.com/jobs/detail/400578?deliverSource=1&pageSource=5001&channel=npJobTab&logid=cc2d0280ba5d8d3f00cf4121594dc665
-- 悠悠有品-产品｜实习生-面向2027年毕业生 上海熔晟信息技术有限公司 2026-07-08
-  产品/策略｜匹配 54｜缺截止
-  https://career.fudan.edu.cn/Zhaopin/zhiweiDetail.html?jobtype=2&id=4fb7684a-35d7-8666-661d-90602aaf4a6d
-
-## 新增非互联网产品/数据
-- 牛客网·实习｜数据分析师（2027届）
-  数据｜匹配 91｜缺截止
-  https://www.nowcoder.com/jobs/detail/400578?deliverSource=1&pageSource=5001&channel=npJobTab&logid=cc2d0280ba5d8d3f00cf4121594dc665
-- 悠悠有品-产品｜实习生-面向2027年毕业生 上海熔晟信息技术有限公司 2026-07-08
-  产品/策略｜匹配 54｜缺截止
-  https://career.fudan.edu.cn/Zhaopin/zhiweiDetail.html?jobtype=2&id=4fb7684a-35d7-8666-661d-90602aaf4a6d
-
-## 新增7天内截止
 - 暂无
 
+## 新增非互联网产品/数据
+- 暂无
+
+## 新增7天内截止
+- 广州市智勇士电子产品有限公司｜tiktok运营
+  产品/策略｜匹配 90｜2026-07-17，剩 4 天
+  https://ggfw.hrss.gd.gov.cn/recruitment/internet/main/#/positionDetail?bbb911=1888134614671355905&bcb009=2075057249730547714
+- 地平线｜多模态大模型和语言大模型算法实习生
+  算法｜匹配 194｜2026-07-20，剩 7 天
+  https://wecruit.hotjob.cn/SU6409ef49bef57c635fd390a6/pb/posDetail.html?postId=69a9405f8e515379dc081df5
+- 地平线｜【地瓜机器人】具身智能高级算法工程师
+  算法｜匹配 149｜2026-07-20，剩 7 天
+  https://wecruit.hotjob.cn/SU6409ef49bef57c635fd390a6/pb/posDetail.html?postId=697c2c8b91532c730e34a82e
+
 ## 新增待补截止
-- 牛客网·实习｜数据分析师（2027届）
-  数据｜匹配 91｜缺截止
-  https://www.nowcoder.com/jobs/detail/400578?deliverSource=1&pageSource=5001&channel=npJobTab&logid=cc2d0280ba5d8d3f00cf4121594dc665
-- 悠悠有品-产品｜实习生-面向2027年毕业生 上海熔晟信息技术有限公司 2026-07-08
-  产品/策略｜匹配 54｜缺截止
-  https://career.fudan.edu.cn/Zhaopin/zhiweiDetail.html?jobtype=2&id=4fb7684a-35d7-8666-661d-90602aaf4a6d
+- 暂无
