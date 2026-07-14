@@ -350,8 +350,22 @@
       "company": "地平线",
       "title": "【地瓜机器人】具身智能高级算法工程师",
       "source_id": "cn-horizon"
+    },
+    "c467f2cdf6431241": {
+      "pushed_at": "2026-07-14T00:02:32.935275+00:00",
+      "first_seen": "2026-07-13T23:53:55.558673+00:00",
+      "company": "地平线",
+      "title": "【地瓜机器人】产品经营总监（RDK机器人开发者套件）",
+      "source_id": "cn-horizon"
+    },
+    "70b58db66d4e262f": {
+      "pushed_at": "2026-07-14T00:02:32.935275+00:00",
+      "first_seen": "2026-07-13T23:53:55.558673+00:00",
+      "company": "地平线",
+      "title": "【地瓜机器人】产品总监（RDK机器人开发者套件）",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-07-13T00:00:40.334067+00:00",
-  "last_marked_count": 3
+  "last_marked_at": "2026-07-14T00:02:32.935275+00:00",
+  "last_marked_count": 2
 }
