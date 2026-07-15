@@ -371,8 +371,22 @@
       "company": "网易",
       "title": "音乐人活动运营实习生",
       "source_id": "cn-netease"
+    },
+    "33f48924ba726b8b": {
+      "pushed_at": "2026-07-15T04:40:33.223323+00:00",
+      "first_seen": "2026-07-15T04:34:09.230351+00:00",
+      "company": "牛客网·实习",
+      "title": "小度产品管培生",
+      "source_id": "nk-intern"
+    },
+    "424d052b005bdd65": {
+      "pushed_at": "2026-07-15T04:40:33.223323+00:00",
+      "first_seen": "2026-07-15T04:34:09.230351+00:00",
+      "company": "虹软科技股份有限公司",
+      "title": "27届秋招提前批-产品项目类",
+      "source_id": "edu-fudan"
     }
   },
-  "last_marked_at": "2026-07-15T00:00:58.845078+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-07-15T04:40:33.223323+00:00",
+  "last_marked_count": 2
 }
