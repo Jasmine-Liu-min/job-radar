@@ -385,8 +385,29 @@
       "company": "虹软科技股份有限公司",
       "title": "27届秋招提前批-产品项目类",
       "source_id": "edu-fudan"
+    },
+    "d26cc2b0aff0d828": {
+      "pushed_at": "2026-07-16T00:05:19.522443+00:00",
+      "first_seen": "2026-07-15T23:57:31.560749+00:00",
+      "company": "网易",
+      "title": "内容运营实习生（AIGC方向）",
+      "source_id": "cn-netease"
+    },
+    "c2c5bef41a097981": {
+      "pushed_at": "2026-07-16T00:05:19.522443+00:00",
+      "first_seen": "2026-07-15T23:57:31.560749+00:00",
+      "company": "网易",
+      "title": "运营策划实习生（时空中的绘旅人）",
+      "source_id": "cn-netease"
+    },
+    "59a7240cf4a70f6f": {
+      "pushed_at": "2026-07-16T00:05:19.522443+00:00",
+      "first_seen": "2026-07-15T23:57:31.560749+00:00",
+      "company": "地平线",
+      "title": "自动驾驶算法工程师实习生",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-07-15T04:40:33.223323+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-07-16T00:05:19.522443+00:00",
+  "last_marked_count": 3
 }
