@@ -420,8 +420,15 @@
       "company": "国投证券股份有限公司",
       "title": "研究岗（策略）实习生（2027届）",
       "source_id": "cn-iguopin"
+    },
+    "d0c9c0ef482e51a6": {
+      "pushed_at": "2026-07-22T00:03:45.583621+00:00",
+      "first_seen": "2026-07-21T23:55:39.381371+00:00",
+      "company": "地平线",
+      "title": "世界模型算法工程师（实时交互方向）",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-07-21T00:04:56.385351+00:00",
+  "last_marked_at": "2026-07-22T00:03:45.583621+00:00",
   "last_marked_count": 1
 }
