@@ -427,8 +427,43 @@
       "company": "地平线",
       "title": "世界模型算法工程师（实时交互方向）",
       "source_id": "cn-horizon"
+    },
+    "9ecb757d9d4fce3c": {
+      "pushed_at": "2026-07-23T00:06:48.555759+00:00",
+      "first_seen": "2026-07-23T00:00:00.961440+00:00",
+      "company": "美团",
+      "title": "搜推产品实习生",
+      "source_id": "cn-meituan-campus"
+    },
+    "e3d89e4e09e09bb8": {
+      "pushed_at": "2026-07-23T00:06:48.555759+00:00",
+      "first_seen": "2026-07-23T00:00:00.961440+00:00",
+      "company": "网易",
+      "title": "音乐人运营实习生",
+      "source_id": "cn-netease"
+    },
+    "196d0b6e495d05a8": {
+      "pushed_at": "2026-07-23T00:06:48.555759+00:00",
+      "first_seen": "2026-07-23T00:00:00.961440+00:00",
+      "company": "网易",
+      "title": "音乐内容制作实习生",
+      "source_id": "cn-netease"
+    },
+    "7b8307af7ddaab19": {
+      "pushed_at": "2026-07-23T00:06:48.555759+00:00",
+      "first_seen": "2026-07-23T00:00:00.961440+00:00",
+      "company": "中远海运物流供应链有限公司",
+      "title": "数智化与科创部AI产品经理",
+      "source_id": "cn-iguopin"
+    },
+    "7594cdb2858c7388": {
+      "pushed_at": "2026-07-23T00:06:48.555759+00:00",
+      "first_seen": "2026-07-23T00:00:00.961440+00:00",
+      "company": "地平线",
+      "title": "自动驾驶仿真算法专家（开/闭环）",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-07-22T00:03:45.583621+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-07-23T00:06:48.555759+00:00",
+  "last_marked_count": 5
 }
