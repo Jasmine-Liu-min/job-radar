@@ -476,8 +476,22 @@
       "company": "网易",
       "title": "内审实习生（SOX方向）",
       "source_id": "cn-netease"
+    },
+    "47d9bd8d976360c3": {
+      "pushed_at": "2026-07-26T05:10:09.534037+00:00",
+      "first_seen": "2026-07-26T05:04:00.809227+00:00",
+      "company": "牛客网·实习",
+      "title": "【2027届秋招】游戏项目管理与用研",
+      "source_id": "nk-intern"
+    },
+    "a77ddecd66094214": {
+      "pushed_at": "2026-07-26T05:10:09.534037+00:00",
+      "first_seen": "2026-07-26T05:04:00.809227+00:00",
+      "company": "牛客网·实习",
+      "title": "软件产品经理",
+      "source_id": "nk-intern"
     }
   },
-  "last_marked_at": "2026-07-25T00:11:07.908068+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-07-26T05:10:09.534037+00:00",
+  "last_marked_count": 2
 }
