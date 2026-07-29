@@ -1,41 +1,35 @@
 # Job Radar｜2026-07-29 新增机会
 
-未推新增 483 条，其中 27届 23 条。
-重点候选 3 条；非互联网产品/数据 1 条；7天内截止 2 条。
-已自动过滤历史推送 3 条。
+未推新增 146 条，其中 27届 6 条。
+重点候选 3 条；非互联网产品/数据 3 条；7天内截止 0 条。
 
 信息台：https://jasmine-liu-min.github.io/job-radar/
 
 线索池：牛客待审核 138 条；信源需关注 9 个。
 
 ## 新增优先看
-- 网易｜平台产品策划实习生
-  产品/策略｜匹配 214｜缺截止
-  https://hr.163.com/job-detail.html?positionId=59824
-- 招商局仁和人寿保险股份有限公司｜2027届实习生
-  产品/策略｜匹配 77｜2026-09-30，剩 63 天
-  https://www.iguopin.com/job/detail?id=211208205760465141
-- 网易｜曲库用户审核实习生
-  产品/策略｜匹配 108｜缺截止
-  https://hr.163.com/job-detail.html?positionId=77804
+- 牛客网·实习｜【2027届秋招】美术项目管理
+  产品/策略｜匹配 102｜缺截止
+  https://www.nowcoder.com/jobs/detail/454334?deliverSource=1&pageSource=5001&channel=npJobTab&activityId=174&logid=686ebe2fd67a036fe7367d85d7795414
+- 牛客网·实习｜【2027届秋招】战略研究专员
+  产品/策略｜匹配 84｜缺截止
+  https://www.nowcoder.com/jobs/detail/454335?deliverSource=1&pageSource=5001&channel=npJobTab&activityId=174&logid=686ebe2fd67a036fe7367d85d7795414
 
 ## 新增非互联网产品/数据
-- 招商局仁和人寿保险股份有限公司｜2027届实习生
-  产品/策略｜匹配 77｜2026-09-30，剩 63 天
-  https://www.iguopin.com/job/detail?id=211208205760465141
+- 牛客网·实习｜【2027届秋招】美术项目管理
+  产品/策略｜匹配 102｜缺截止
+  https://www.nowcoder.com/jobs/detail/454334?deliverSource=1&pageSource=5001&channel=npJobTab&activityId=174&logid=686ebe2fd67a036fe7367d85d7795414
+- 牛客网·实习｜【2027届秋招】战略研究专员
+  产品/策略｜匹配 84｜缺截止
+  https://www.nowcoder.com/jobs/detail/454335?deliverSource=1&pageSource=5001&channel=npJobTab&activityId=174&logid=686ebe2fd67a036fe7367d85d7795414
 
 ## 新增7天内截止
-- 中数联物流科技（上海）有限公司｜客户与产品解决方案团队-产品经理（数据方向）
-  产品/策略｜匹配 144｜2026-07-31，剩 2 天
-  https://www.iguopin.com/job/detail?id=192743080682589322
-- 中铝财务有限责任公司｜招聘公告
-  产品/策略｜匹配 125｜2026-07-31，剩 2 天
-  http://www.sasac.gov.cn/n2588035/n2588325/n2588350/c35687833/content.html
+- 暂无
 
 ## 新增待补截止
-- 网易｜平台产品策划实习生
-  产品/策略｜匹配 214｜缺截止
-  https://hr.163.com/job-detail.html?positionId=59824
-- 网易｜曲库用户审核实习生
-  产品/策略｜匹配 108｜缺截止
-  https://hr.163.com/job-detail.html?positionId=77804
+- 牛客网·实习｜【2027届秋招】美术项目管理
+  产品/策略｜匹配 102｜缺截止
+  https://www.nowcoder.com/jobs/detail/454334?deliverSource=1&pageSource=5001&channel=npJobTab&activityId=174&logid=686ebe2fd67a036fe7367d85d7795414
+- 牛客网·实习｜【2027届秋招】战略研究专员
+  产品/策略｜匹配 84｜缺截止
+  https://www.nowcoder.com/jobs/detail/454335?deliverSource=1&pageSource=5001&channel=npJobTab&activityId=174&logid=686ebe2fd67a036fe7367d85d7795414

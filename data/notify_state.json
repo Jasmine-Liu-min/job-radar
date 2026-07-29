@@ -546,8 +546,22 @@
       "company": "中铝财务有限责任公司",
       "title": "招聘公告",
       "source_id": "gov-sasac"
+    },
+    "5f78f6cd0f217b94": {
+      "pushed_at": "2026-07-29T04:58:49.173925+00:00",
+      "first_seen": "2026-07-29T04:52:30.307837+00:00",
+      "company": "牛客网·实习",
+      "title": "【2027届秋招】美术项目管理",
+      "source_id": "nk-intern"
+    },
+    "c4c10f5780835c53": {
+      "pushed_at": "2026-07-29T04:58:49.173925+00:00",
+      "first_seen": "2026-07-29T04:52:30.307837+00:00",
+      "company": "牛客网·实习",
+      "title": "【2027届秋招】战略研究专员",
+      "source_id": "nk-intern"
     }
   },
-  "last_marked_at": "2026-07-29T00:04:40.015813+00:00",
-  "last_marked_count": 5
+  "last_marked_at": "2026-07-29T04:58:49.173925+00:00",
+  "last_marked_count": 2
 }
