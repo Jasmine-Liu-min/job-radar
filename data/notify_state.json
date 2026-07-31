@@ -588,8 +588,22 @@
       "company": "海南高速交通融合产业发展有限公司",
       "title": "经营分析岗",
       "source_id": "cn-iguopin"
+    },
+    "1e023c4a74bde583": {
+      "pushed_at": "2026-07-31T00:08:50.963112+00:00",
+      "first_seen": "2026-07-31T00:00:38.270830+00:00",
+      "company": "网易",
+      "title": "大模型标注实习生（AI音乐/乐理方向）",
+      "source_id": "cn-netease"
+    },
+    "7fac48e57e369ae7": {
+      "pushed_at": "2026-07-31T00:08:50.963112+00:00",
+      "first_seen": "2026-07-31T00:00:38.270830+00:00",
+      "company": "网易",
+      "title": "活动策划实习生（易次元）",
+      "source_id": "cn-netease"
     }
   },
-  "last_marked_at": "2026-07-30T00:07:21.155706+00:00",
-  "last_marked_count": 4
+  "last_marked_at": "2026-07-31T00:08:50.963112+00:00",
+  "last_marked_count": 2
 }
