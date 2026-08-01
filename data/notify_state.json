@@ -602,8 +602,36 @@
       "company": "网易",
       "title": "活动策划实习生（易次元）",
       "source_id": "cn-netease"
+    },
+    "60c4c822847b9b07": {
+      "pushed_at": "2026-08-01T00:10:46.419954+00:00",
+      "first_seen": "2026-08-01T00:01:56.964972+00:00",
+      "company": "网易",
+      "title": "游戏系统策划实习生（游戏性能与包体管理）",
+      "source_id": "cn-netease"
+    },
+    "e2a8e5672b04cd94": {
+      "pushed_at": "2026-08-01T00:10:46.419954+00:00",
+      "first_seen": "2026-08-01T00:01:56.964972+00:00",
+      "company": "网易",
+      "title": "自制歌曲企划实习生（云上）",
+      "source_id": "cn-netease"
+    },
+    "37894a50afc1aaaa": {
+      "pushed_at": "2026-08-01T00:10:46.419954+00:00",
+      "first_seen": "2026-08-01T00:01:56.964972+00:00",
+      "company": "航天通信中心",
+      "title": "数据资产建设岗",
+      "source_id": "cn-iguopin"
+    },
+    "ebcc25a16c00726f": {
+      "pushed_at": "2026-08-01T00:10:46.419954+00:00",
+      "first_seen": "2026-08-01T00:01:56.964972+00:00",
+      "company": "海口市秀英区旅游文化投资发展有限公司",
+      "title": "战略投资部实习生",
+      "source_id": "cn-iguopin"
     }
   },
-  "last_marked_at": "2026-07-31T00:08:50.963112+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-08-01T00:10:46.419954+00:00",
+  "last_marked_count": 4
 }
