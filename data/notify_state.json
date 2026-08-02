@@ -630,8 +630,22 @@
       "company": "海口市秀英区旅游文化投资发展有限公司",
       "title": "战略投资部实习生",
       "source_id": "cn-iguopin"
+    },
+    "c851d3177c537059": {
+      "pushed_at": "2026-08-02T00:05:10.935587+00:00",
+      "first_seen": "2026-08-01T23:56:56.521874+00:00",
+      "company": "美团",
+      "title": "商家端产品实习生",
+      "source_id": "cn-meituan-campus"
+    },
+    "038195834d840a20": {
+      "pushed_at": "2026-08-02T00:05:10.935587+00:00",
+      "first_seen": "2026-08-01T00:01:56.964972+00:00",
+      "company": "北京国际大数据交易有限公司",
+      "title": "解决方案岗",
+      "source_id": "cn-iguopin"
     }
   },
-  "last_marked_at": "2026-08-01T00:10:46.419954+00:00",
-  "last_marked_count": 4
+  "last_marked_at": "2026-08-02T00:05:10.935587+00:00",
+  "last_marked_count": 2
 }
