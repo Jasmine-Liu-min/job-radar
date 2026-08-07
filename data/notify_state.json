@@ -742,8 +742,36 @@
       "company": "海南高速交通融合产业发展有限公司",
       "title": "项目管理部总经理",
       "source_id": "cn-iguopin"
+    },
+    "e51572fdfc092d07": {
+      "pushed_at": "2026-08-07T23:40:02.535068+00:00",
+      "first_seen": "2026-08-07T23:32:26.750948+00:00",
+      "company": "美团",
+      "title": "校招项目管理实习生",
+      "source_id": "cn-meituan-campus"
+    },
+    "c69a3dad6ac7a123": {
+      "pushed_at": "2026-08-07T23:40:02.535068+00:00",
+      "first_seen": "2026-08-07T23:32:26.750948+00:00",
+      "company": "网易",
+      "title": "小红书运营实习生",
+      "source_id": "cn-netease"
+    },
+    "629311e0b0839825": {
+      "pushed_at": "2026-08-07T23:40:02.535068+00:00",
+      "first_seen": "2026-08-07T23:32:26.750948+00:00",
+      "company": "深圳市科曼医疗设备有限公司",
+      "title": "算法工程师（超声产品方向）",
+      "source_id": "gov-mohrss"
+    },
+    "1579930adc8fbeea": {
+      "pushed_at": "2026-08-07T23:40:02.535068+00:00",
+      "first_seen": "2026-08-07T23:32:26.750948+00:00",
+      "company": "芯原微电子（广州）有限公司",
+      "title": "数字前端设计/验证工程师",
+      "source_id": "gov-mohrss"
     }
   },
-  "last_marked_at": "2026-08-07T01:50:06.860988+00:00",
-  "last_marked_count": 3
+  "last_marked_at": "2026-08-07T23:40:02.535068+00:00",
+  "last_marked_count": 4
 }
