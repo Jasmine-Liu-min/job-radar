@@ -721,8 +721,29 @@
       "company": "地平线",
       "title": "规控系统架构工程师SE",
       "source_id": "cn-horizon"
+    },
+    "df41f33a93ff8187": {
+      "pushed_at": "2026-08-07T01:50:06.860988+00:00",
+      "first_seen": "2026-08-07T01:41:43.451823+00:00",
+      "company": "网易",
+      "title": "游戏研发项目管理工程师（27届+广/沪/杭）",
+      "source_id": "cn-netease"
+    },
+    "7199618d8362d0e3": {
+      "pushed_at": "2026-08-07T01:50:06.860988+00:00",
+      "first_seen": "2026-08-07T01:41:43.451823+00:00",
+      "company": "网易",
+      "title": "游戏引擎研发实习生（27届+广/沪/杭）",
+      "source_id": "cn-netease"
+    },
+    "c13fdf861aabffdd": {
+      "pushed_at": "2026-08-07T01:50:06.860988+00:00",
+      "first_seen": "2026-08-07T01:41:43.451823+00:00",
+      "company": "海南高速交通融合产业发展有限公司",
+      "title": "项目管理部总经理",
+      "source_id": "cn-iguopin"
     }
   },
-  "last_marked_at": "2026-08-06T00:05:43.124004+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-08-07T01:50:06.860988+00:00",
+  "last_marked_count": 3
 }
