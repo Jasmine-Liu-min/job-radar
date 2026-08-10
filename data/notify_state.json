@@ -770,8 +770,29 @@
       "company": "芯原微电子（广州）有限公司",
       "title": "数字前端设计/验证工程师",
       "source_id": "gov-mohrss"
+    },
+    "240d13609edebacb": {
+      "pushed_at": "2026-08-10T23:40:47.989255+00:00",
+      "first_seen": "2026-08-10T23:33:40.237664+00:00",
+      "company": "地平线",
+      "title": "【2027届校招】大模型数据挖掘工程师",
+      "source_id": "cn-horizon"
+    },
+    "1e292f0af2ec4a93": {
+      "pushed_at": "2026-08-10T23:40:47.989255+00:00",
+      "first_seen": "2026-08-10T23:33:40.237664+00:00",
+      "company": "美团",
+      "title": "【北斗】大模型算法工程师 SFT/RL/Agent方向",
+      "source_id": "cn-meituan-campus"
+    },
+    "bf589bb63f2fd64b": {
+      "pushed_at": "2026-08-10T23:40:47.989255+00:00",
+      "first_seen": "2026-08-10T23:33:40.237664+00:00",
+      "company": "地平线",
+      "title": "【2027届校招】项目管理工程师",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-08-07T23:40:02.535068+00:00",
-  "last_marked_count": 4
+  "last_marked_at": "2026-08-10T23:40:47.989255+00:00",
+  "last_marked_count": 3
 }
