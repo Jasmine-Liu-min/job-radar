@@ -826,8 +826,22 @@
       "company": "广州朝云控股有限公司",
       "title": "财务经营分析主管/经理",
       "source_id": "gov-mohrss"
+    },
+    "2173e59d194290c7": {
+      "pushed_at": "2026-08-12T23:47:42.232436+00:00",
+      "first_seen": "2026-08-12T23:39:40.590487+00:00",
+      "company": "网易",
+      "title": "项目管理实习生（世界之外）",
+      "source_id": "cn-netease"
+    },
+    "e67637f49b4875d6": {
+      "pushed_at": "2026-08-12T23:47:42.232436+00:00",
+      "first_seen": "2026-08-12T23:39:40.590487+00:00",
+      "company": "美团",
+      "title": "无人机—UI设计实习生",
+      "source_id": "cn-meituan-campus"
     }
   },
-  "last_marked_at": "2026-08-11T23:46:10.932601+00:00",
-  "last_marked_count": 5
+  "last_marked_at": "2026-08-12T23:47:42.232436+00:00",
+  "last_marked_count": 2
 }
