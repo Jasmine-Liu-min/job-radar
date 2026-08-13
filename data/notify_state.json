@@ -840,8 +840,29 @@
       "company": "美团",
       "title": "无人机—UI设计实习生",
       "source_id": "cn-meituan-campus"
+    },
+    "dd8a4898384b3290": {
+      "pushed_at": "2026-08-13T23:46:53.890062+00:00",
+      "first_seen": "2026-08-13T23:39:24.142645+00:00",
+      "company": "宁德时代",
+      "title": "2027届秋招 战略投资分析师",
+      "source_id": "cn-catl"
+    },
+    "27cde43ad29bb358": {
+      "pushed_at": "2026-08-13T23:46:53.890062+00:00",
+      "first_seen": "2026-08-13T23:39:24.142645+00:00",
+      "company": "宁德时代",
+      "title": "2027届秋招 产品项目工程师",
+      "source_id": "cn-catl"
+    },
+    "067fd704c82f3040": {
+      "pushed_at": "2026-08-13T23:46:53.890062+00:00",
+      "first_seen": "2026-08-13T23:39:24.142645+00:00",
+      "company": "招商局仁和人寿保险股份有限公司",
+      "title": "2027届实习生（财务部）",
+      "source_id": "cn-iguopin"
     }
   },
-  "last_marked_at": "2026-08-12T23:47:42.232436+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-08-13T23:46:53.890062+00:00",
+  "last_marked_count": 3
 }
