@@ -861,8 +861,36 @@
       "company": "招商局仁和人寿保险股份有限公司",
       "title": "2027届实习生（财务部）",
       "source_id": "cn-iguopin"
+    },
+    "37eb266dcf1d3ebd": {
+      "pushed_at": "2026-08-14T23:27:02.702733+00:00",
+      "first_seen": "2026-08-14T23:20:21.967223+00:00",
+      "company": "美团",
+      "title": "【2027】Keeta-商业分析实习生",
+      "source_id": "cn-meituan-campus"
+    },
+    "a9231988d1b47491": {
+      "pushed_at": "2026-08-14T23:27:02.702733+00:00",
+      "first_seen": "2026-08-14T23:20:21.967223+00:00",
+      "company": "美团",
+      "title": "【2027】Keeta-产品实习生",
+      "source_id": "cn-meituan-campus"
+    },
+    "32c9bd1bbb63cf5c": {
+      "pushed_at": "2026-08-14T23:27:02.702733+00:00",
+      "first_seen": "2026-08-14T23:20:21.967223+00:00",
+      "company": "网易",
+      "title": "内容运营实习生（资源位方向）",
+      "source_id": "cn-netease"
+    },
+    "e4eb118f5b9be3d5": {
+      "pushed_at": "2026-08-14T23:27:02.702733+00:00",
+      "first_seen": "2026-08-14T23:20:21.967223+00:00",
+      "company": "招商局仁和人寿保险股份有限公司",
+      "title": "财务部实习生（2027届）",
+      "source_id": "cn-iguopin"
     }
   },
-  "last_marked_at": "2026-08-13T23:46:53.890062+00:00",
-  "last_marked_count": 3
+  "last_marked_at": "2026-08-14T23:27:02.702733+00:00",
+  "last_marked_count": 4
 }
