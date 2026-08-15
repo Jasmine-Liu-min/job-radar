@@ -1,42 +1,27 @@
-# Job Radar｜2026-08-14 新增机会
+# Job Radar｜2026-08-15 新增机会
 
-未推新增 409 条，其中 27届 18 条。
-重点候选 6 条；非互联网产品/数据 1 条；7天内截止 0 条。
-已自动过滤历史推送 2 条。
+未推新增 113 条，其中 27届 4 条。
+重点候选 1 条；非互联网产品/数据 1 条；7天内截止 1 条。
+已自动过滤历史推送 1 条。
 
 信息台：https://jasmine-liu-min.github.io/job-radar/
 
 线索池：牛客待审核 138 条；信源需关注 10 个。
 
 ## 新增优先看
-- 美团｜【2027】Keeta-商业分析实习生
-  产品/策略｜匹配 218｜缺截止
-  https://zhaopin.meituan.com/jobdetail?jobUnionId=4692043330
-- 美团｜【2027】Keeta-产品实习生
-  产品/策略｜匹配 210｜缺截止
-  https://zhaopin.meituan.com/jobdetail?jobUnionId=4691986310
-- 网易｜内容运营实习生（资源位方向）
-  产品/策略｜匹配 145｜缺截止
-  https://hr.163.com/job-detail.html?positionId=78154
-- 招商局仁和人寿保险股份有限公司｜财务部实习生（2027届）
-  产品/策略｜匹配 77｜2026-09-30，剩 47 天
-  https://www.iguopin.com/job/detail?id=211208205760465141
+- 宁德时代｜2027届秋招 电芯产品开发工程师-韩语
+  产品/策略｜匹配 128｜2027-03-04，剩 201 天
+  https://zhaopin.atlbattery.com/SU5ff30f5b9b0d78e6f4283a0b/pb/posDetail.html?postId=6a7d709968cc6f624f3d7ff7
 
 ## 新增非互联网产品/数据
-- 招商局仁和人寿保险股份有限公司｜财务部实习生（2027届）
-  产品/策略｜匹配 77｜2026-09-30，剩 47 天
-  https://www.iguopin.com/job/detail?id=211208205760465141
+- 宁德时代｜2027届秋招 电芯产品开发工程师-韩语
+  产品/策略｜匹配 128｜2027-03-04，剩 201 天
+  https://zhaopin.atlbattery.com/SU5ff30f5b9b0d78e6f4283a0b/pb/posDetail.html?postId=6a7d709968cc6f624f3d7ff7
 
 ## 新增7天内截止
-- 暂无
+- 宏脉信息技术（广州）股份有限公司｜企业经理
+  产品/策略｜匹配 66｜2026-08-18，剩 3 天
+  https://ggfw.hrss.gd.gov.cn/recruitment/internet/main/#/positionDetail?bbb911=1805417425916379137&bcb009=2087078014223106050
 
 ## 新增待补截止
-- 美团｜【2027】Keeta-商业分析实习生
-  产品/策略｜匹配 218｜缺截止
-  https://zhaopin.meituan.com/jobdetail?jobUnionId=4692043330
-- 美团｜【2027】Keeta-产品实习生
-  产品/策略｜匹配 210｜缺截止
-  https://zhaopin.meituan.com/jobdetail?jobUnionId=4691986310
-- 网易｜内容运营实习生（资源位方向）
-  产品/策略｜匹配 145｜缺截止
-  https://hr.163.com/job-detail.html?positionId=78154
+- 暂无
