@@ -903,8 +903,15 @@
       "company": "宏脉信息技术（广州）股份有限公司",
       "title": "企业经理",
       "source_id": "gov-mohrss"
+    },
+    "cec53c8a8e53d833": {
+      "pushed_at": "2026-08-16T02:51:08.422860+00:00",
+      "first_seen": "2026-08-16T02:46:36.750229+00:00",
+      "company": "牛客网·实习",
+      "title": "数据分析师-27届提前批",
+      "source_id": "nk-intern"
     }
   },
-  "last_marked_at": "2026-08-15T23:27:08.652478+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-08-16T02:51:08.422860+00:00",
+  "last_marked_count": 1
 }
