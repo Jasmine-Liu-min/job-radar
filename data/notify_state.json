@@ -917,8 +917,22 @@
       "company": "中国航发资产管理有限公司",
       "title": "行业研究岗",
       "source_id": "cn-iguopin"
+    },
+    "09cc218cc79347cf": {
+      "pushed_at": "2026-08-17T23:30:10.670520+00:00",
+      "first_seen": "2026-08-17T23:21:29.725051+00:00",
+      "company": "美团",
+      "title": "AI应用开发工程师",
+      "source_id": "cn-meituan-campus"
+    },
+    "2ba28e58c5f0a5f0": {
+      "pushed_at": "2026-08-17T23:30:10.670520+00:00",
+      "first_seen": "2026-08-17T23:21:29.725051+00:00",
+      "company": "美团",
+      "title": "安全AI算法工程师",
+      "source_id": "cn-meituan-campus"
     }
   },
-  "last_marked_at": "2026-08-16T23:25:51.017065+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-08-17T23:30:10.670520+00:00",
+  "last_marked_count": 2
 }
