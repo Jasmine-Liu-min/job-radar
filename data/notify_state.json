@@ -931,8 +931,29 @@
       "company": "美团",
       "title": "安全AI算法工程师",
       "source_id": "cn-meituan-campus"
+    },
+    "bc2a3ae0020396ef": {
+      "pushed_at": "2026-08-18T23:28:40.996702+00:00",
+      "first_seen": "2026-08-18T23:20:26.785728+00:00",
+      "company": "网易",
+      "title": "游戏AI产品经理实习生",
+      "source_id": "cn-netease"
+    },
+    "fce8ec36a863b938": {
+      "pushed_at": "2026-08-18T23:28:40.996702+00:00",
+      "first_seen": "2026-08-18T23:20:26.785728+00:00",
+      "company": "网易",
+      "title": "平台产品经理实习生",
+      "source_id": "cn-netease"
+    },
+    "6ac0c799f49490af": {
+      "pushed_at": "2026-08-18T23:28:40.996702+00:00",
+      "first_seen": "2026-08-18T23:20:26.785728+00:00",
+      "company": "中冶建筑研究总院有限公司",
+      "title": "项目管理工程师-2027校招",
+      "source_id": "cn-iguopin"
     }
   },
-  "last_marked_at": "2026-08-17T23:30:10.670520+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-08-18T23:28:40.996702+00:00",
+  "last_marked_count": 3
 }
