@@ -987,8 +987,15 @@
       "company": "网易",
       "title": "游戏设计师（关卡/系统/数值/战斗）27届+广/沪/杭",
       "source_id": "cn-netease"
+    },
+    "018f11f482677c04": {
+      "pushed_at": "2026-08-21T23:30:00.930132+00:00",
+      "first_seen": "2026-08-21T23:22:21.652309+00:00",
+      "company": "网易",
+      "title": "服务端开发实习生",
+      "source_id": "cn-netease"
     }
   },
-  "last_marked_at": "2026-08-20T23:42:50.709154+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-08-21T23:30:00.930132+00:00",
+  "last_marked_count": 1
 }
