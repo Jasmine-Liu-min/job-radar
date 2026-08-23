@@ -994,8 +994,15 @@
       "company": "网易",
       "title": "服务端开发实习生",
       "source_id": "cn-netease"
+    },
+    "02bc819fdeab7d08": {
+      "pushed_at": "2026-08-23T02:54:02.352245+00:00",
+      "first_seen": "2026-08-23T02:49:02.690429+00:00",
+      "company": "广东中大管理咨询集团股份有限公司",
+      "title": "2027校招-顾问培训生",
+      "source_id": "edu-fudan"
     }
   },
-  "last_marked_at": "2026-08-21T23:30:00.930132+00:00",
+  "last_marked_at": "2026-08-23T02:54:02.352245+00:00",
   "last_marked_count": 1
 }
