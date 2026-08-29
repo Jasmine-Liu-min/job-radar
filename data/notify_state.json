@@ -1078,8 +1078,22 @@
       "company": "地平线",
       "title": "【2027届校招】AI基础架构平台工程师",
       "source_id": "cn-horizon"
+    },
+    "df51f74430501ac9": {
+      "pushed_at": "2026-08-29T04:11:24.677529+00:00",
+      "first_seen": "2026-08-29T04:01:24.571591+00:00",
+      "company": "地平线",
+      "title": "【2027届校招】多模态大模型算法工程师-mono",
+      "source_id": "cn-horizon"
+    },
+    "4a348776d83b77e8": {
+      "pushed_at": "2026-08-29T04:11:24.677529+00:00",
+      "first_seen": "2026-08-29T04:01:24.571591+00:00",
+      "company": "地平线",
+      "title": "【2027届校招】机器人世界模型算法工程师",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-08-28T06:55:32.409099+00:00",
-  "last_marked_count": 3
+  "last_marked_at": "2026-08-29T04:11:24.677529+00:00",
+  "last_marked_count": 2
 }
