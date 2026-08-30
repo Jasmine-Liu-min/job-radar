@@ -1,7 +1,7 @@
-# Job Radar｜2026-08-29 新增机会
+# Job Radar｜2026-08-30 新增机会
 
-未推新增 369 条，其中 27届 19 条。
-重点候选 0 条；非互联网产品/数据 0 条；7天内截止 3 条。
+未推新增 175 条，其中 27届 6 条。
+重点候选 0 条；非互联网产品/数据 0 条；7天内截止 2 条。
 已自动过滤历史推送 1 条。
 
 信息台：https://jasmine-liu-min.github.io/job-radar/
@@ -15,12 +15,12 @@
 - 暂无
 
 ## 新增7天内截止
-- 地平线｜【2027届校招】多模态大模型算法工程师-mono
-  算法｜匹配 214｜2026-09-05，剩 7 天
-  https://wecruit.hotjob.cn/SU6409ef49bef57c635fd390a6/pb/posDetail.html?postId=6a7933ed4315481304953a92
-- 地平线｜【2027届校招】机器人世界模型算法工程师
-  算法｜匹配 175｜2026-09-05，剩 7 天
-  https://wecruit.hotjob.cn/SU6409ef49bef57c635fd390a6/pb/posDetail.html?postId=6a7933ed4315481304953a94
+- 地平线｜【2027届校招】智能驾驶项目质量工程师（PQA）
+  其他｜匹配 121｜2026-09-06，剩 7 天
+  https://wecruit.hotjob.cn/SU6409ef49bef57c635fd390a6/pb/posDetail.html?postId=6a7933ee68cc6f624f377176
+- 地平线｜【2027届校招】基础IP设计工程师
+  其他｜匹配 109｜2026-09-06，剩 7 天
+  https://wecruit.hotjob.cn/SU6409ef49bef57c635fd390a6/pb/posDetail.html?postId=6a7933f01ad6db7cf8fbb988
 
 ## 新增待补截止
 - 暂无
