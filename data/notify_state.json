@@ -1120,8 +1120,29 @@
       "company": "中国—东盟信息港股份有限公司",
       "title": "2027届战略培训生",
       "source_id": "cn-iguopin"
+    },
+    "8474292280188f05": {
+      "pushed_at": "2026-09-01T01:47:15.161020+00:00",
+      "first_seen": "2026-09-01T01:39:52.861353+00:00",
+      "company": "网易",
+      "title": "AI活动实习生",
+      "source_id": "cn-netease"
+    },
+    "077bba24add43d9d": {
+      "pushed_at": "2026-09-01T01:47:15.161020+00:00",
+      "first_seen": "2026-09-01T01:39:52.861353+00:00",
+      "company": "地平线",
+      "title": "【地瓜机器人】SOC开发工程师-Ai flow方向",
+      "source_id": "cn-horizon"
+    },
+    "cc992d0e6f501b21": {
+      "pushed_at": "2026-09-01T01:47:15.161020+00:00",
+      "first_seen": "2026-09-01T01:39:52.861353+00:00",
+      "company": "地平线",
+      "title": "【地瓜机器人】IP开发工程师-CPU方向",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-08-31T01:16:24.049936+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-09-01T01:47:15.161020+00:00",
+  "last_marked_count": 3
 }
