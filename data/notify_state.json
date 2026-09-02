@@ -1141,8 +1141,22 @@
       "company": "地平线",
       "title": "【地瓜机器人】IP开发工程师-CPU方向",
       "source_id": "cn-horizon"
+    },
+    "b8b2c06a4b70b249": {
+      "pushed_at": "2026-09-02T00:56:30.083897+00:00",
+      "first_seen": "2026-09-02T00:49:40.963993+00:00",
+      "company": "地平线",
+      "title": "【2027届校招】AI加速算法工程师（模型量化压缩）",
+      "source_id": "cn-horizon"
+    },
+    "97238cbedcc3c40c": {
+      "pushed_at": "2026-09-02T00:56:30.083897+00:00",
+      "first_seen": "2026-09-02T00:49:40.963993+00:00",
+      "company": "地平线",
+      "title": "【2027届校招】算法工程师（模型与部署方向）",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-09-01T01:47:15.161020+00:00",
-  "last_marked_count": 3
+  "last_marked_at": "2026-09-02T00:56:30.083897+00:00",
+  "last_marked_count": 2
 }
