@@ -1169,8 +1169,50 @@
       "company": "牛客网·校招",
       "title": "产品经理管培生（27届）(J15116)",
       "source_id": "nk-campus"
+    },
+    "12fde13b295acb19": {
+      "pushed_at": "2026-09-03T01:05:46.701046+00:00",
+      "first_seen": "2026-09-03T00:57:32.960705+00:00",
+      "company": "美团",
+      "title": "2027秋招-客服产品运营",
+      "source_id": "cn-meituan-campus"
+    },
+    "67298674bc465bbc": {
+      "pushed_at": "2026-09-03T01:05:46.701046+00:00",
+      "first_seen": "2026-09-03T00:57:32.960705+00:00",
+      "company": "网易",
+      "title": "社交玩法产品策划实习生",
+      "source_id": "cn-netease"
+    },
+    "ce6c3c225dad8c73": {
+      "pushed_at": "2026-09-03T01:05:46.701046+00:00",
+      "first_seen": "2026-09-03T00:57:32.960705+00:00",
+      "company": "美团",
+      "title": "2027秋招-客服工具运营",
+      "source_id": "cn-meituan-campus"
+    },
+    "91c776878ebb7192": {
+      "pushed_at": "2026-09-03T01:05:46.701046+00:00",
+      "first_seen": "2026-09-03T00:57:32.960705+00:00",
+      "company": "网易",
+      "title": "游戏测试开发实习生（无限大）",
+      "source_id": "cn-netease"
+    },
+    "85a886eecd42b4cc": {
+      "pushed_at": "2026-09-03T01:05:46.701046+00:00",
+      "first_seen": "2026-09-03T00:57:32.960705+00:00",
+      "company": "中移互联网有限公司",
+      "title": "解决方案经理（2027校招）",
+      "source_id": "cn-iguopin"
+    },
+    "a731f1c1322c8318": {
+      "pushed_at": "2026-09-03T01:05:46.701046+00:00",
+      "first_seen": "2026-09-03T00:57:32.960705+00:00",
+      "company": "地平线",
+      "title": "视觉多模态算法工程师",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-09-02T06:29:20.048217+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-09-03T01:05:46.701046+00:00",
+  "last_marked_count": 6
 }
