@@ -1246,8 +1246,22 @@
       "company": "地平线",
       "title": "【2027届校招】芯片可测性设计工程师",
       "source_id": "cn-horizon"
+    },
+    "852c2d2383e7bb95": {
+      "pushed_at": "2026-09-05T00:45:53.361173+00:00",
+      "first_seen": "2026-09-05T00:37:32.592380+00:00",
+      "company": "美团",
+      "title": "27届校招-商户/客户管理培训生",
+      "source_id": "cn-meituan-campus"
+    },
+    "e31874c7daa7b54b": {
+      "pushed_at": "2026-09-05T00:45:53.361173+00:00",
+      "first_seen": "2026-09-05T00:37:32.592380+00:00",
+      "company": "中国人民人寿保险股份有限公司海南省分公司",
+      "title": "数据分析岗（2027届校招)(J79388)",
+      "source_id": "cn-iguopin"
     }
   },
-  "last_marked_at": "2026-09-04T00:56:16.170675+00:00",
-  "last_marked_count": 5
+  "last_marked_at": "2026-09-05T00:45:53.361173+00:00",
+  "last_marked_count": 2
 }
