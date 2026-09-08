@@ -1260,8 +1260,15 @@
       "company": "中国人民人寿保险股份有限公司海南省分公司",
       "title": "数据分析岗（2027届校招)(J79388)",
       "source_id": "cn-iguopin"
+    },
+    "fc104d6e23c5ad1a": {
+      "pushed_at": "2026-09-08T01:03:09.434401+00:00",
+      "first_seen": "2026-09-08T00:54:44.624250+00:00",
+      "company": "地平线",
+      "title": "【2027届校招】分布式存储开发工程师（北京）",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-09-05T00:45:53.361173+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-09-08T01:03:09.434401+00:00",
+  "last_marked_count": 1
 }
