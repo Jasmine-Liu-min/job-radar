@@ -1330,8 +1330,36 @@
       "company": "国家电投集团数字科技有限公司",
       "title": "高级解决方案经理-2026年第一批社会招聘（智慧产业部）",
       "source_id": "cn-iguopin"
+    },
+    "8885cbacc755a74f": {
+      "pushed_at": "2026-09-10T00:59:50.162426+00:00",
+      "first_seen": "2026-09-10T00:51:29.885800+00:00",
+      "company": "网易",
+      "title": "AI社交产品运营实习生",
+      "source_id": "cn-netease"
+    },
+    "c6f6e74cffcca80f": {
+      "pushed_at": "2026-09-10T00:59:50.162426+00:00",
+      "first_seen": "2026-09-10T00:51:29.885800+00:00",
+      "company": "美团",
+      "title": "招聘实习生（AI方向）",
+      "source_id": "cn-meituan-campus"
+    },
+    "10bdcdd2af7f0ebb": {
+      "pushed_at": "2026-09-10T00:59:50.162426+00:00",
+      "first_seen": "2026-09-10T00:51:29.885800+00:00",
+      "company": "上海能源建设集团有限公司",
+      "title": "工程项目管理岗-2027校招",
+      "source_id": "cn-iguopin"
+    },
+    "1c92d182fa81eddd": {
+      "pushed_at": "2026-09-10T00:59:50.162426+00:00",
+      "first_seen": "2026-09-10T00:51:29.885800+00:00",
+      "company": "地平线",
+      "title": "【地瓜机器人】双目视觉算法嵌入式软件开发工程师",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-09-09T01:11:25.489745+00:00",
-  "last_marked_count": 9
+  "last_marked_at": "2026-09-10T00:59:50.162426+00:00",
+  "last_marked_count": 4
 }
