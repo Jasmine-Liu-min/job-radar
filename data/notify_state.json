@@ -1456,8 +1456,22 @@
       "company": "中远海运散货运输有限公司",
       "title": "2027届人工智能岗",
       "source_id": "cn-iguopin"
+    },
+    "2c8c692ced5fbc69": {
+      "pushed_at": "2026-09-15T01:17:20.431089+00:00",
+      "first_seen": "2026-09-15T01:10:21.474384+00:00",
+      "company": "网易",
+      "title": "音乐内容策略运营实习生（北京）",
+      "source_id": "cn-netease"
+    },
+    "f209b5cc72c0c05f": {
+      "pushed_at": "2026-09-15T01:17:20.431089+00:00",
+      "first_seen": "2026-09-15T01:10:21.474384+00:00",
+      "company": "地平线",
+      "title": "规控算法工程师（控制方向）",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-09-12T01:02:00.945746+00:00",
+  "last_marked_at": "2026-09-15T01:17:20.431089+00:00",
   "last_marked_count": 2
 }
