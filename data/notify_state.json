@@ -1512,8 +1512,15 @@
       "company": "地平线",
       "title": "Agent产品经理",
       "source_id": "cn-horizon"
+    },
+    "9d34277df136d889": {
+      "pushed_at": "2026-09-18T01:11:02.131594+00:00",
+      "first_seen": "2026-09-18T01:03:12.883549+00:00",
+      "company": "网易",
+      "title": "用户增长营销实习生（LOFTER）",
+      "source_id": "cn-netease"
     }
   },
-  "last_marked_at": "2026-09-17T01:12:03.883074+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-09-18T01:11:02.131594+00:00",
+  "last_marked_count": 1
 }
