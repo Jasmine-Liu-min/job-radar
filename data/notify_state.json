@@ -1519,8 +1519,43 @@
       "company": "网易",
       "title": "用户增长营销实习生（LOFTER）",
       "source_id": "cn-netease"
+    },
+    "7c9f623c77b0c8b2": {
+      "pushed_at": "2026-09-19T01:05:01.566001+00:00",
+      "first_seen": "2026-09-19T00:59:05.354318+00:00",
+      "company": "中远海运特种运输股份有限公司",
+      "title": "2027届航运经营岗",
+      "source_id": "cn-iguopin"
+    },
+    "33c672eeb0f72d80": {
+      "pushed_at": "2026-09-19T01:05:01.566001+00:00",
+      "first_seen": "2026-09-19T00:59:05.354318+00:00",
+      "company": "中远海运特种运输股份有限公司",
+      "title": "2027届企业管理岗",
+      "source_id": "cn-iguopin"
+    },
+    "4dc2531e938674ef": {
+      "pushed_at": "2026-09-19T01:05:01.566001+00:00",
+      "first_seen": "2026-09-19T00:59:05.354318+00:00",
+      "company": "网易",
+      "title": "音乐运营实习生",
+      "source_id": "cn-netease"
+    },
+    "f92bdeafac1cf0ce": {
+      "pushed_at": "2026-09-19T01:05:01.566001+00:00",
+      "first_seen": "2026-09-19T00:59:05.354318+00:00",
+      "company": "地平线",
+      "title": "【2027届校招】大模型AI Infra/MLSys工程师",
+      "source_id": "cn-horizon"
+    },
+    "f6fc6e4c4e83f56b": {
+      "pushed_at": "2026-09-19T01:05:01.566001+00:00",
+      "first_seen": "2026-09-19T00:59:05.354318+00:00",
+      "company": "地平线",
+      "title": "【2027届校招】自动驾驶系统测试工程师",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-09-18T01:11:02.131594+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-09-19T01:05:01.566001+00:00",
+  "last_marked_count": 5
 }
