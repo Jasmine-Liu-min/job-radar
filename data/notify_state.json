@@ -1554,8 +1554,15 @@
       "company": "地平线",
       "title": "【2027届校招】自动驾驶系统测试工程师",
       "source_id": "cn-horizon"
+    },
+    "fe441fc9b3c22630": {
+      "pushed_at": "2026-09-20T00:48:30.519751+00:00",
+      "first_seen": "2026-09-20T00:40:35.126976+00:00",
+      "company": "清远市星学火教育科技有限公司",
+      "title": "课程顾问-清远专场",
+      "source_id": "gov-mohrss"
     }
   },
-  "last_marked_at": "2026-09-19T01:05:01.566001+00:00",
-  "last_marked_count": 5
+  "last_marked_at": "2026-09-20T00:48:30.519751+00:00",
+  "last_marked_count": 1
 }
