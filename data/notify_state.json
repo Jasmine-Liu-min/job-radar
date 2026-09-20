@@ -1561,8 +1561,22 @@
       "company": "清远市星学火教育科技有限公司",
       "title": "课程顾问-清远专场",
       "source_id": "gov-mohrss"
+    },
+    "546534daeb33335a": {
+      "pushed_at": "2026-09-20T07:05:39.881423+00:00",
+      "first_seen": "2026-09-20T07:01:28.432276+00:00",
+      "company": "牛客网·实习",
+      "title": "拼多多2027校园招聘 - 数据分析师(秋招，HC充足)",
+      "source_id": "nk-intern"
+    },
+    "7e1dc10a796df303": {
+      "pushed_at": "2026-09-20T07:05:39.881423+00:00",
+      "first_seen": "2026-09-20T07:01:28.432276+00:00",
+      "company": "香港科技大学数据建模MSC（DDM）硕士学位项目",
+      "title": "2027Fall招生宣讲会—线上专场",
+      "source_id": "edu-sjtu"
     }
   },
-  "last_marked_at": "2026-09-20T00:48:30.519751+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-09-20T07:05:39.881423+00:00",
+  "last_marked_count": 2
 }
