@@ -1575,8 +1575,15 @@
       "company": "香港科技大学数据建模MSC（DDM）硕士学位项目",
       "title": "2027Fall招生宣讲会—线上专场",
       "source_id": "edu-sjtu"
+    },
+    "7d3a3427c9e66261": {
+      "pushed_at": "2026-09-21T00:59:14.502300+00:00",
+      "first_seen": "2026-09-21T00:51:29.705293+00:00",
+      "company": "地平线",
+      "title": "【地瓜机器人】AI芯片产品总监",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-09-20T07:05:39.881423+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-09-21T00:59:14.502300+00:00",
+  "last_marked_count": 1
 }
