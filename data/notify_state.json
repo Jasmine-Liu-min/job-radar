@@ -1694,8 +1694,15 @@
       "company": "佛山佛塑科技集团股份有限公司",
       "title": "项目管理专员",
       "source_id": "gov-mohrss"
+    },
+    "c017fc1a887b7ab9": {
+      "pushed_at": "2026-09-25T01:15:30.713347+00:00",
+      "first_seen": "2026-09-25T01:08:47.292342+00:00",
+      "company": "网易",
+      "title": "招聘实习生",
+      "source_id": "cn-netease"
     }
   },
-  "last_marked_at": "2026-09-24T01:12:54.060144+00:00",
-  "last_marked_count": 11
+  "last_marked_at": "2026-09-25T01:15:30.713347+00:00",
+  "last_marked_count": 1
 }
