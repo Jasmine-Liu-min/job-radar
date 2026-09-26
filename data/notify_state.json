@@ -1701,8 +1701,15 @@
       "company": "网易",
       "title": "招聘实习生",
       "source_id": "cn-netease"
+    },
+    "dc5e566488bb93ec": {
+      "pushed_at": "2026-09-26T01:18:33.440130+00:00",
+      "first_seen": "2026-09-26T01:12:21.763841+00:00",
+      "company": "中国—东盟信息港股份有限公司",
+      "title": "2027届财务培训生",
+      "source_id": "cn-iguopin"
     }
   },
-  "last_marked_at": "2026-09-25T01:15:30.713347+00:00",
+  "last_marked_at": "2026-09-26T01:18:33.440130+00:00",
   "last_marked_count": 1
 }
