@@ -1729,8 +1729,22 @@
       "company": "网易",
       "title": "产品运营实习生-视频产品",
       "source_id": "cn-netease"
+    },
+    "1e549afc71261d0f": {
+      "pushed_at": "2026-10-10T02:12:59.855140+00:00",
+      "first_seen": "2026-10-10T02:06:33.413905+00:00",
+      "company": "网易",
+      "title": "版权运营实习生",
+      "source_id": "cn-netease"
+    },
+    "011f7b0e7236fb5b": {
+      "pushed_at": "2026-10-10T02:12:59.855140+00:00",
+      "first_seen": "2026-10-10T02:06:33.413905+00:00",
+      "company": "网易",
+      "title": "内容策略运营实习生（云上工作室）",
+      "source_id": "cn-netease"
     }
   },
-  "last_marked_at": "2026-10-09T02:57:35.419582+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-10-10T02:12:59.855140+00:00",
+  "last_marked_count": 2
 }
