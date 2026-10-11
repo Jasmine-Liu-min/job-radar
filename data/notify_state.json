@@ -1743,8 +1743,15 @@
       "company": "网易",
       "title": "内容策略运营实习生（云上工作室）",
       "source_id": "cn-netease"
+    },
+    "a6f7cd0c529bbb45": {
+      "pushed_at": "2026-10-11T01:41:26.387384+00:00",
+      "first_seen": "2026-10-11T01:33:50.425810+00:00",
+      "company": "美团",
+      "title": "食杂零售管培生",
+      "source_id": "cn-meituan-campus"
     }
   },
-  "last_marked_at": "2026-10-10T02:12:59.855140+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-10-11T01:41:26.387384+00:00",
+  "last_marked_count": 1
 }
