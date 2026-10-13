@@ -1750,8 +1750,15 @@
       "company": "美团",
       "title": "食杂零售管培生",
       "source_id": "cn-meituan-campus"
+    },
+    "5e39ec3e4fcdab83": {
+      "pushed_at": "2026-10-13T03:28:23.268661+00:00",
+      "first_seen": "2026-10-13T03:21:28.499479+00:00",
+      "company": "地平线",
+      "title": "自动驾驶测评开发工程师/专家",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-10-11T01:41:26.387384+00:00",
+  "last_marked_at": "2026-10-13T03:28:23.268661+00:00",
   "last_marked_count": 1
 }
