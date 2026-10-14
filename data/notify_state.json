@@ -1757,8 +1757,22 @@
       "company": "地平线",
       "title": "自动驾驶测评开发工程师/专家",
       "source_id": "cn-horizon"
+    },
+    "c9778f7938e05e15": {
+      "pushed_at": "2026-10-14T01:42:01.983535+00:00",
+      "first_seen": "2026-10-14T01:35:59.072072+00:00",
+      "company": "宁德时代",
+      "title": "2027届秋招 研发数字化解决方案工程师",
+      "source_id": "cn-catl"
+    },
+    "a655c902ed4b7601": {
+      "pushed_at": "2026-10-14T01:42:01.983535+00:00",
+      "first_seen": "2026-10-14T01:35:59.072072+00:00",
+      "company": "地平线",
+      "title": "【地瓜机器人】RDK产品经理",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-10-13T03:28:23.268661+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-10-14T01:42:01.983535+00:00",
+  "last_marked_count": 2
 }
