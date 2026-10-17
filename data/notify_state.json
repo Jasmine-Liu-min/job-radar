@@ -1806,8 +1806,22 @@
       "company": "谷川联行有限公司",
       "title": "产品专员",
       "source_id": "cn-iguopin"
+    },
+    "a3ee74c2aeea9760": {
+      "pushed_at": "2026-10-17T01:11:28.548179+00:00",
+      "first_seen": "2026-10-17T01:04:38.154215+00:00",
+      "company": "网易",
+      "title": "互动影游平台QA实习生",
+      "source_id": "cn-netease"
+    },
+    "d299e7419f487d39": {
+      "pushed_at": "2026-10-17T01:11:28.548179+00:00",
+      "first_seen": "2026-10-17T01:04:38.154215+00:00",
+      "company": "地平线",
+      "title": "【2027届校招】芯片系统验证工程师",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-10-15T01:20:00.945676+00:00",
-  "last_marked_count": 5
+  "last_marked_at": "2026-10-17T01:11:28.548179+00:00",
+  "last_marked_count": 2
 }
