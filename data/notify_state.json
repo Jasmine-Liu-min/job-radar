@@ -1834,8 +1834,15 @@
       "company": "上海航天设备制造总厂有限公司",
       "title": "产品设计师（2027届）(J11602)",
       "source_id": "cn-iguopin"
+    },
+    "940b0e09f968d4e8": {
+      "pushed_at": "2026-10-21T06:38:20.531598+00:00",
+      "first_seen": "2026-10-21T06:34:43.623503+00:00",
+      "company": "爱尔集新能源（中国）有限公司",
+      "title": "2027届电芯产品开发工程师",
+      "source_id": "edu-fudan"
     }
   },
-  "last_marked_at": "2026-10-20T01:42:28.617907+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-10-21T06:38:20.531598+00:00",
+  "last_marked_count": 1
 }
