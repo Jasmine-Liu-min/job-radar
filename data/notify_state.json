@@ -1841,8 +1841,22 @@
       "company": "爱尔集新能源（中国）有限公司",
       "title": "2027届电芯产品开发工程师",
       "source_id": "edu-fudan"
+    },
+    "3f1aa0af037ff440": {
+      "pushed_at": "2026-10-22T01:20:59.803971+00:00",
+      "first_seen": "2026-10-22T01:14:38.223182+00:00",
+      "company": "地平线",
+      "title": "【2027届校招】智驾软件工程师（模型部署）",
+      "source_id": "cn-horizon"
+    },
+    "3d809268accc4246": {
+      "pushed_at": "2026-10-22T01:20:59.803971+00:00",
+      "first_seen": "2026-10-22T01:14:38.223182+00:00",
+      "company": "地平线",
+      "title": "【2027届校招】BSP软件开发工程师",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-10-21T06:38:20.531598+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-10-22T01:20:59.803971+00:00",
+  "last_marked_count": 2
 }
