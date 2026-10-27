@@ -1890,8 +1890,29 @@
       "company": "东风汽车集团股份有限公司奕派汽车科技分公司",
       "title": "研发-产品开发",
       "source_id": "cn-iguopin"
+    },
+    "df6cf6f9a712934f": {
+      "pushed_at": "2026-10-27T01:57:15.551312+00:00",
+      "first_seen": "2026-10-27T01:49:26.715127+00:00",
+      "company": "网易",
+      "title": "标签运营实习生",
+      "source_id": "cn-netease"
+    },
+    "3bcb173c37f80fd0": {
+      "pushed_at": "2026-10-27T01:57:15.551312+00:00",
+      "first_seen": "2026-10-27T01:49:26.715127+00:00",
+      "company": "网易",
+      "title": "互动影游平台QA实习生-游戏&影游测试",
+      "source_id": "cn-netease"
+    },
+    "905fbfcc8c8bcf3b": {
+      "pushed_at": "2026-10-27T01:57:15.551312+00:00",
+      "first_seen": "2026-10-27T01:49:26.715127+00:00",
+      "company": "中数联物流咨询研究（上海）有限公司",
+      "title": "咨询经理（战略规划方向）",
+      "source_id": "cn-iguopin"
     }
   },
-  "last_marked_at": "2026-10-25T00:57:45.738883+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-10-27T01:57:15.551312+00:00",
+  "last_marked_count": 3
 }
