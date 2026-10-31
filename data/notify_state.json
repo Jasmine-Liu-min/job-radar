@@ -1918,8 +1918,29 @@
       "company": "地平线",
       "title": "算法工程师 - 静态感知后处理（泊车方向）",
       "source_id": "cn-horizon"
+    },
+    "c65aa94f1b3979b6": {
+      "pushed_at": "2026-10-31T02:08:46.483530+00:00",
+      "first_seen": "2026-10-31T02:01:41.593681+00:00",
+      "company": "网易",
+      "title": "达人内容传播实习生（网易BUFF）",
+      "source_id": "cn-netease"
+    },
+    "f2bda971bd45df8e": {
+      "pushed_at": "2026-10-31T02:08:46.483530+00:00",
+      "first_seen": "2026-10-31T02:01:41.593681+00:00",
+      "company": "地平线",
+      "title": "具身通用操作算法实习生（VLA 方向）",
+      "source_id": "cn-horizon"
+    },
+    "54c15b87137d4847": {
+      "pushed_at": "2026-10-31T02:08:46.483530+00:00",
+      "first_seen": "2026-10-31T02:01:41.593681+00:00",
+      "company": "中国东方电气集团有限公司",
+      "title": "机器学习与数值模拟工程师",
+      "source_id": "cn-iguopin"
     }
   },
-  "last_marked_at": "2026-10-29T02:15:26.361823+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-10-31T02:08:46.483530+00:00",
+  "last_marked_count": 3
 }
