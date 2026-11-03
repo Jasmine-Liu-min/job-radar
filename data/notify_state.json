@@ -1953,8 +1953,15 @@
       "company": "北京神舟航天软件技术股份有限公司",
       "title": "AI研发工程师-2027校园招聘(J10253)",
       "source_id": "cn-iguopin"
+    },
+    "2a888c9e13f10271": {
+      "pushed_at": "2026-11-03T03:57:13.689185+00:00",
+      "first_seen": "2026-11-03T03:50:12.040613+00:00",
+      "company": "地平线",
+      "title": "【2027届校招】端到端算法工程师(大模型方向)",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-11-01T01:59:34.650410+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-11-03T03:57:13.689185+00:00",
+  "last_marked_count": 1
 }
