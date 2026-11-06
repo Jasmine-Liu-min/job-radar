@@ -1,12 +1,12 @@
-# Job Radar｜2026-11-05 新增机会
+# Job Radar｜2026-11-06 新增机会
 
-未推新增 263 条，其中 27届 19 条。
+未推新增 279 条，其中 27届 22 条。
 重点候选 0 条；非互联网产品/数据 0 条；7天内截止 1 条。
-已自动过滤历史推送 2 条。
+已自动过滤历史推送 1 条。
 
 信息台：https://jasmine-liu-min.github.io/job-radar/
 
-线索池：牛客待审核 138 条；信源需关注 11 个。
+线索池：牛客待审核 138 条；信源需关注 12 个。
 
 ## 新增优先看
 - 暂无
@@ -15,9 +15,9 @@
 - 暂无
 
 ## 新增7天内截止
-- 地平线｜机器人仿真与 VLA Benchmark 方向
-  算法｜匹配 130｜2026-11-12，剩 7 天
-  https://wecruit.hotjob.cn/SU6409ef49bef57c635fd390a6/pb/posDetail.html?postId=6ad9dbceb6fae46f67951372
+- 宁德时代｜2027届秋招 智造程序工程师-DG
+  其他｜匹配 99｜2026-11-13，剩 7 天
+  https://zhaopin.atlbattery.com/SU5ff30f5b9b0d78e6f4283a0b/pb/posDetail.html?postId=6a7d673c68cc6f624f3d7b00
 
 ## 新增待补截止
 - 暂无
