@@ -2009,8 +2009,22 @@
       "company": "中国南方航空",
       "title": "2027届“明珠优才管培生计划”招聘启动",
       "source_id": "gov-sasac"
+    },
+    "e94fdb34c768f1aa": {
+      "pushed_at": "2026-11-10T04:36:03.609447+00:00",
+      "first_seen": "2026-11-10T04:29:12.866331+00:00",
+      "company": "美团",
+      "title": "AI搜索产品实习生",
+      "source_id": "cn-meituan-campus"
+    },
+    "a8fed8afaa73d0ef": {
+      "pushed_at": "2026-11-10T04:36:03.609447+00:00",
+      "first_seen": "2026-11-10T04:29:12.866331+00:00",
+      "company": "网易",
+      "title": "内容运营实习生（UGC站外推广）",
+      "source_id": "cn-netease"
     }
   },
-  "last_marked_at": "2026-11-09T02:30:40.627244+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-11-10T04:36:03.609447+00:00",
+  "last_marked_count": 2
 }
