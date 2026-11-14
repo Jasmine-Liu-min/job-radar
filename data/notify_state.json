@@ -2037,8 +2037,22 @@
       "company": "地平线",
       "title": "项目管理部助理实习生",
       "source_id": "cn-horizon"
+    },
+    "602bc8edb6d1ebcd": {
+      "pushed_at": "2026-11-14T03:01:31.037088+00:00",
+      "first_seen": "2026-11-14T02:54:36.669445+00:00",
+      "company": "网易",
+      "title": "AI 内容运营实习生",
+      "source_id": "cn-netease"
+    },
+    "92ff6280e3ab4008": {
+      "pushed_at": "2026-11-14T03:01:31.037088+00:00",
+      "first_seen": "2026-11-14T02:54:36.669445+00:00",
+      "company": "网易",
+      "title": "UGC 活动运营实习生",
+      "source_id": "cn-netease"
     }
   },
-  "last_marked_at": "2026-11-12T03:56:39.622088+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-11-14T03:01:31.037088+00:00",
+  "last_marked_count": 2
 }
