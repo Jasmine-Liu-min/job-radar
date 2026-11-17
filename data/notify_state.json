@@ -2058,8 +2058,29 @@
       "company": "网易",
       "title": "AI Agent工程实习生（美术平台研发方向）",
       "source_id": "cn-netease"
+    },
+    "56d809de943fb8da": {
+      "pushed_at": "2026-11-17T05:04:41.382558+00:00",
+      "first_seen": "2026-11-17T04:57:24.456190+00:00",
+      "company": "网易",
+      "title": "互动影游平台测试实习生",
+      "source_id": "cn-netease"
+    },
+    "98b924a4ad387d99": {
+      "pushed_at": "2026-11-17T05:04:41.382558+00:00",
+      "first_seen": "2026-11-17T04:57:24.456190+00:00",
+      "company": "地平线",
+      "title": "自动驾驶数据挖掘实习生（VLM / Agent 方向）",
+      "source_id": "cn-horizon"
+    },
+    "1d1fa3d5391ca5e0": {
+      "pushed_at": "2026-11-17T05:04:41.382558+00:00",
+      "first_seen": "2026-11-17T04:57:24.456190+00:00",
+      "company": "地平线",
+      "title": "泊车感知后处理算法工程师",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-11-16T02:42:33.026694+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-11-17T05:04:41.382558+00:00",
+  "last_marked_count": 3
 }
