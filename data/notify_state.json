@@ -2079,8 +2079,15 @@
       "company": "地平线",
       "title": "泊车感知后处理算法工程师",
       "source_id": "cn-horizon"
+    },
+    "312544699a9768b7": {
+      "pushed_at": "2026-11-18T04:08:52.703512+00:00",
+      "first_seen": "2026-11-18T04:01:16.294627+00:00",
+      "company": "地平线",
+      "title": "端到端模型量化&压缩工程师",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-11-17T05:04:41.382558+00:00",
-  "last_marked_count": 3
+  "last_marked_at": "2026-11-18T04:08:52.703512+00:00",
+  "last_marked_count": 1
 }
