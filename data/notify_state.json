@@ -2086,8 +2086,29 @@
       "company": "地平线",
       "title": "端到端模型量化&压缩工程师",
       "source_id": "cn-horizon"
+    },
+    "cc26f4afbf9a2f78": {
+      "pushed_at": "2026-11-19T04:07:09.997836+00:00",
+      "first_seen": "2026-11-19T03:58:35.133538+00:00",
+      "company": "美团",
+      "title": "HR实习生（招聘方向）",
+      "source_id": "cn-meituan-campus"
+    },
+    "4043e8a40a141b08": {
+      "pushed_at": "2026-11-19T04:07:09.997836+00:00",
+      "first_seen": "2026-11-19T03:58:35.133538+00:00",
+      "company": "地平线",
+      "title": "行车决策规划算法工程师（环境融合方向）",
+      "source_id": "cn-horizon"
+    },
+    "e909f1afe03e7baa": {
+      "pushed_at": "2026-11-19T04:07:09.997836+00:00",
+      "first_seen": "2026-11-19T03:58:35.133538+00:00",
+      "company": "地平线",
+      "title": "高阶主动安全工程师",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-11-18T04:08:52.703512+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-11-19T04:07:09.997836+00:00",
+  "last_marked_count": 3
 }
