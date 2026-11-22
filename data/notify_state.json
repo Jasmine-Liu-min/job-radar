@@ -2107,8 +2107,15 @@
       "company": "地平线",
       "title": "高阶主动安全工程师",
       "source_id": "cn-horizon"
+    },
+    "0d07dc4f0a58577b": {
+      "pushed_at": "2026-11-22T02:58:50.714200+00:00",
+      "first_seen": "2026-11-22T02:49:59.201478+00:00",
+      "company": "地平线",
+      "title": "【地瓜机器人】IP开发工程师-NOC方向",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-11-19T04:07:09.997836+00:00",
-  "last_marked_count": 3
+  "last_marked_at": "2026-11-22T02:58:50.714200+00:00",
+  "last_marked_count": 1
 }
