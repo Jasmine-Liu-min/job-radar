@@ -2114,8 +2114,29 @@
       "company": "地平线",
       "title": "【地瓜机器人】IP开发工程师-NOC方向",
       "source_id": "cn-horizon"
+    },
+    "8156d6fd66cc2ffb": {
+      "pushed_at": "2026-11-23T03:37:25.663597+00:00",
+      "first_seen": "2026-11-23T03:30:43.308669+00:00",
+      "company": "网易",
+      "title": "投放运营实习生",
+      "source_id": "cn-netease"
+    },
+    "ea72f68e11583fc0": {
+      "pushed_at": "2026-11-23T03:37:25.663597+00:00",
+      "first_seen": "2026-11-23T03:30:43.308669+00:00",
+      "company": "河南省视博电子股份有限公司",
+      "title": "项目管理助理（官方ETC）",
+      "source_id": "cn-iguopin"
+    },
+    "599ebe26c3010e07": {
+      "pushed_at": "2026-11-23T03:37:25.663597+00:00",
+      "first_seen": "2026-11-23T03:30:43.308669+00:00",
+      "company": "河南省视博电子股份有限公司",
+      "title": "产品经理（官方ETC）",
+      "source_id": "cn-iguopin"
     }
   },
-  "last_marked_at": "2026-11-22T02:58:50.714200+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-11-23T03:37:25.663597+00:00",
+  "last_marked_count": 3
 }
