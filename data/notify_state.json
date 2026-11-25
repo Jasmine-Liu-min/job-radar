@@ -2149,8 +2149,22 @@
       "company": "珠海金山软件有限公司",
       "title": "AI应用专项-运营专员",
       "source_id": "gov-mohrss"
+    },
+    "366426dfd044f1e4": {
+      "pushed_at": "2026-11-25T05:20:33.832909+00:00",
+      "first_seen": "2026-11-25T05:13:41.971904+00:00",
+      "company": "网易",
+      "title": "客户运营实习生（杭州）",
+      "source_id": "cn-netease"
+    },
+    "636cfb10f58f1dc9": {
+      "pushed_at": "2026-11-25T05:20:33.832909+00:00",
+      "first_seen": "2026-11-25T05:13:41.971904+00:00",
+      "company": "零邦服饰有限公司",
+      "title": "27届产品管培生",
+      "source_id": "gov-ncss"
     }
   },
-  "last_marked_at": "2026-11-24T06:52:47.245473+00:00",
+  "last_marked_at": "2026-11-25T05:20:33.832909+00:00",
   "last_marked_count": 2
 }
