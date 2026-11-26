@@ -2163,8 +2163,15 @@
       "company": "零邦服饰有限公司",
       "title": "27届产品管培生",
       "source_id": "gov-ncss"
+    },
+    "f234d9f40116e9b8": {
+      "pushed_at": "2026-11-26T04:50:31.495051+00:00",
+      "first_seen": "2026-11-26T04:42:20.603275+00:00",
+      "company": "地平线",
+      "title": "算法工程师 - 静态感知后处理",
+      "source_id": "cn-horizon"
     }
   },
-  "last_marked_at": "2026-11-25T05:20:33.832909+00:00",
-  "last_marked_count": 2
+  "last_marked_at": "2026-11-26T04:50:31.495051+00:00",
+  "last_marked_count": 1
 }
