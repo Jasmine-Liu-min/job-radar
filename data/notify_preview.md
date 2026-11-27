@@ -1,23 +1,30 @@
-# Job Radar｜2026-11-26 新增机会
+# Job Radar｜2026-11-27 新增机会
 
-未推新增 302 条，其中 27届 9 条。
-重点候选 0 条；非互联网产品/数据 0 条；7天内截止 1 条。
-已自动过滤历史推送 1 条。
+未推新增 213 条，其中 27届 10 条。
+重点候选 2 条；非互联网产品/数据 2 条；7天内截止 0 条。
 
 信息台：https://jasmine-liu-min.github.io/job-radar/
 
-线索池：牛客待审核 138 条；信源需关注 11 个。
+线索池：牛客待审核 138 条；信源需关注 12 个。
 
 ## 新增优先看
-- 暂无
+- 中交海峰风电发展股份有限公司上海分公司｜项目财务管理岗
+  产品/策略｜匹配 153｜2026-12-23，剩 26 天
+  https://jobs.rsj.sh.gov.cn/ggzp-shrs/index.html#/jobDetails?id=3117167
+- 上海蓝色光标数据科技集团有限公司｜AI营销解决方案专员
+  产品/策略｜匹配 148｜2026-12-24，剩 27 天
+  https://jobs.rsj.sh.gov.cn/ggzp-shrs/index.html#/jobDetails?id=3117349
 
 ## 新增非互联网产品/数据
-- 暂无
+- 中交海峰风电发展股份有限公司上海分公司｜项目财务管理岗
+  产品/策略｜匹配 153｜2026-12-23，剩 26 天
+  https://jobs.rsj.sh.gov.cn/ggzp-shrs/index.html#/jobDetails?id=3117167
+- 上海蓝色光标数据科技集团有限公司｜AI营销解决方案专员
+  产品/策略｜匹配 148｜2026-12-24，剩 27 天
+  https://jobs.rsj.sh.gov.cn/ggzp-shrs/index.html#/jobDetails?id=3117349
 
 ## 新增7天内截止
-- 地平线｜算法工程师 - 静态感知后处理
-  算法｜匹配 137｜2026-12-03，剩 7 天
-  https://wecruit.hotjob.cn/SU6409ef49bef57c635fd390a6/pb/posDetail.html?postId=6aacb444fea5e04bda6df804
+- 暂无
 
 ## 新增待补截止
 - 暂无

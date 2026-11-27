@@ -2170,8 +2170,22 @@
       "company": "地平线",
       "title": "算法工程师 - 静态感知后处理",
       "source_id": "cn-horizon"
+    },
+    "513e32c90bd36d7e": {
+      "pushed_at": "2026-11-27T04:57:04.174203+00:00",
+      "first_seen": "2026-11-27T04:47:51.849389+00:00",
+      "company": "中交海峰风电发展股份有限公司上海分公司",
+      "title": "项目财务管理岗",
+      "source_id": "gov-mohrss"
+    },
+    "1342a5a5eed7dcaf": {
+      "pushed_at": "2026-11-27T04:57:04.174203+00:00",
+      "first_seen": "2026-11-27T04:47:51.849389+00:00",
+      "company": "上海蓝色光标数据科技集团有限公司",
+      "title": "AI营销解决方案专员",
+      "source_id": "gov-mohrss"
     }
   },
-  "last_marked_at": "2026-11-26T04:50:31.495051+00:00",
-  "last_marked_count": 1
+  "last_marked_at": "2026-11-27T04:57:04.174203+00:00",
+  "last_marked_count": 2
 }
